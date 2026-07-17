@@ -41,7 +41,6 @@ coincidir exactamente):
 | `assets/img/cromatografia.jpg` | Evidencia de la cromatografía | Análisis de laboratorio |
 | `assets/docs/desafio-1.pdf` | PDF oficial del Desafío 1 | Desafío 1 y PDF (10%) |
 | `assets/docs/informe-tecnico.pdf` | Informe técnico final | Análisis de laboratorio |
-| `assets/img/espectrofotometria.jpg` | Evidencia práctica T.A.I. (opcional) | — |
 | `assets/img/extraccion-grasa.jpg` | Evidencia práctica T.A.F.Q. (opcional) | — |
 
 Ya agregados ✅:
@@ -52,7 +51,9 @@ Ya agregados ✅:
 - `assets/img/reflexion.jpg` — Avril trabajando en la eliminación de humedad (soporte de la reflexión)
 - `assets/img/pesada-balanza.jpg`, `assets/img/humedad.jpg` y `assets/img/humedad-desecador.jpg` — evidencias de % Humedad
 - `assets/img/preparacion-muestras.jpg` — preparación de muestras (P.M.A.O.)
+- `assets/img/espectrofotometria.jpg` y `assets/img/espectrofotometria-cubeta.jpg` — evidencias de espectrofotometría (T.A.I.)
 - `assets/docs/pmao-analisis-humedad-cenizas.pdf` — contenidos de humedad y cenizas (P.M.A.O.)
+- `assets/docs/pmao-analisis-grasas.pdf` — contenidos de análisis de grasas (P.M.A.O.)
 - `assets/docs/tai-cromatografia-papel.pdf` — contenidos de cromatografía en papel (T.A.I.)
 - `assets/docs/tai-espectrofotometria.pdf` — guía de espectrofotometría (T.A.I.)
 - `assets/docs/tafq-extraccion-grasa.pdf` — guía de extracción etérea (T.A.F.Q.)
