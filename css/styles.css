@@ -578,6 +578,15 @@ ul {
   font-size: 0.95rem;
 }
 
+/* ===== Video embebido ===== */
+.video-embed {
+  width: 100%;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  background-color: #000;
+  display: block;
+}
+
 /* ===== Figuras con pie de foto ===== */
 .figure {
   margin: 1.25rem 0;

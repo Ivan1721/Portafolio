@@ -24,9 +24,10 @@ pmao.html                # P.M.A.O.: presentación del módulo + subpáginas
 tai.html                 # T.A.I.: espectrofotometría (guía PDF embebida)
 tafq.html                # T.A.F.Q.: extracción etérea de grasa (guía PDF embebida)
 css/styles.css           # Estilos (paleta cálida en :root)
-js/main.js               # Menú móvil, animaciones, placeholders
+js/main.js               # Menú móvil, animaciones, visor de PDF, placeholders
 assets/img/              # Fotos e insignia
-assets/docs/             # PDFs (desafío e informe)
+assets/docs/             # PDFs (desafío, contenidos, guías e informe)
+assets/video/            # Videos de las prácticas
 ```
 
 ## ⚠️ Archivos pendientes de agregar
@@ -36,10 +37,7 @@ coincidir exactamente):
 
 | Archivo | Qué es | Lo pide la rúbrica |
 |---|---|---|
-| `assets/img/cenizas.jpg` | Evidencia del ensayo de cenizas | Análisis de laboratorio |
-| `assets/img/grasa.jpg` | Evidencia del ensayo de grasa | Análisis de laboratorio |
-| `assets/img/cromatografia.jpg` | Evidencia de la cromatografía | Análisis de laboratorio |
-| `assets/docs/desafio-1.pdf` | PDF oficial del Desafío 1 | Desafío 1 y PDF (10%) |
+| `assets/img/cromatografia.jpg` | Foto real del cromatograma de la práctica | Análisis de laboratorio |
 | `assets/docs/informe-tecnico.pdf` | Informe técnico final | Análisis de laboratorio |
 | `assets/img/extraccion-grasa.jpg` | Evidencia práctica T.A.F.Q. (opcional) | — |
 
@@ -52,6 +50,11 @@ Ya agregados ✅:
 - `assets/img/pesada-balanza.jpg`, `assets/img/humedad.jpg` y `assets/img/humedad-desecador.jpg` — evidencias de % Humedad
 - `assets/img/preparacion-muestras.jpg` — preparación de muestras (P.M.A.O.)
 - `assets/img/espectrofotometria.jpg` y `assets/img/espectrofotometria-cubeta.jpg` — evidencias de espectrofotometría (T.A.I.)
+- `assets/img/cenizas1.jpg` y `assets/img/cenizas2.jpg` — antes y después del ensayo de % Cenizas
+- `assets/video/grasa-solvente.mp4` — video del manto calefactor con el balón y el solvente (% Grasa)
+- `assets/docs/desafio-1.pdf` — PDF oficial del Desafío N.º 1 (subpágina Desafío 1)
+- `assets/img/grasa1.jpg` y `assets/img/grasa2.jpg` — mantos calefactores y pesada de la grasa extraída (% Grasa)
+- `assets/img/cromatografia-esquema.jpg` — esquema ilustrativo de la técnica (Cromatografía)
 - `assets/docs/pmao-analisis-humedad-cenizas.pdf` — contenidos de humedad y cenizas (P.M.A.O.)
 - `assets/docs/pmao-analisis-grasas.pdf` — contenidos de análisis de grasas (P.M.A.O.)
 - `assets/docs/tai-cromatografia-papel.pdf` — contenidos de cromatografía en papel (T.A.I.)
@@ -67,13 +70,38 @@ Ya agregados ✅:
 Mientras falten, el sitio muestra un recuadro "📷 Imagen pendiente" en su lugar
 (la insignia simplemente se oculta).
 
-## También pendiente de revisar
+## Checklist de entrega
 
-- **Datos de resultados**: las tablas de los análisis traen valores de
-  ejemplo marcados con "(ejemplo)" — reemplazarlos por los datos reales.
-- **Conclusiones**: ajustarlas a los resultados obtenidos.
-- **Nombre completo del módulo P.M.A.O.**: agregarlo en `pmao.html` si el
-  profesor lo exige (hay un comentario `⚠️` indicando dónde).
+**Contenido pendiente (además de los archivos de arriba):**
+
+- [ ] **Datos reales en las tablas**: las 4 tablas de análisis (humedad,
+  cenizas, grasa, cromatografía) traen valores marcados con "(ejemplo)".
+  Datos ya capturados en fotos: pesada de humedad 1,0290 g y balón con
+  grasa 132,94 g — faltan las masas iniciales para calcular los %.
+- [ ] **Conclusiones**: ajustar las 4 conclusiones a los resultados reales.
+- [ ] **Reflexión (¿Quién soy?)**: que Avril la lea y agregue frases propias.
+- [ ] **Foto de perfil más personal** (retrato con delantal) — la actual es
+  de espaldas y muy similar a la de la reflexión.
+- [ ] **Nombre completo del módulo P.M.A.O.** en `pmao.html` (opcional).
+
+**Estado según la rúbrica (32 pts):**
+
+| Dimensión | Estado |
+|---|---|
+| Inicio: encabezado e identidad (15%) | ✅ Completo |
+| Inicio: presentación 10–20 líneas (15%) | ✅ Completo |
+| Inicio: identidad del colegio (10%) | ✅ Completo |
+| ¿Quién soy?: presentación e imagen (10%) | ✅ (mejorable: foto retrato) |
+| ¿Quién soy?: reflexión (15%) | ✅ (recomendado: toque personal) |
+| P.M.A.O.: presentación del módulo (10%) | ✅ Completo |
+| P.M.A.O.: Desafío 1 con PDF (10%) | ✅ Completo |
+| P.M.A.O.: 5 subpáginas de análisis (15%) | ⚠️ Falta el Informe Técnico en PDF |
+
+**Antes de entregar:**
+
+- [ ] Publicar los últimos cambios (`git add . && git commit && git push`)
+- [ ] Revisar el sitio publicado página por página (PDFs, fotos, video)
+- [ ] Enviar el link al profesor entre el **20 y el 31 de julio de 2026**
 
 ## Publicar cambios
 
