@@ -3,23 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Portafolio de Iván García — Desarrollador de software. Proyectos, habilidades y contacto.">
-  <title>Iván García | Portafolio</title>
+  <meta name="description" content="Portafolio Profesional de Avril Darix San Martín Jiménez — 4° Año Medio, Especialidad Química Industrial, Centro Politécnico Particular de Ñuñoa (2026).">
+  <title>Inicio | Portafolio Profesional — Avril San Martín</title>
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
-  <!-- ===== Navegación ===== -->
+  <!-- ===== Encabezado: insignia + nombre + menú (Inicio, ¿Quién soy?, P.M.A.O., T.A.I., T.A.F.Q.) ===== -->
   <header class="header">
     <nav class="nav container">
-      <a href="#inicio" class="nav__logo">Iván<span>.</span></a>
+      <a href="index.html" class="nav__brand">
+        <!-- ⚠️ Guarda la insignia del colegio como assets/img/insignia.png -->
+        <img src="assets/img/insignia.png" alt="Insignia del Centro Politécnico Particular de Ñuñoa" class="nav__badge" data-optional>
+        <span class="nav__brand-text">
+          <strong>Avril San Martín J.</strong>
+          <small>Portafolio Profesional · Química Industrial</small>
+        </span>
+      </a>
 
       <ul class="nav__menu" id="nav-menu">
-        <li><a href="#inicio" class="nav__link active">Inicio</a></li>
-        <li><a href="#sobre-mi" class="nav__link">Sobre mí</a></li>
-        <li><a href="#habilidades" class="nav__link">Habilidades</a></li>
-        <li><a href="#proyectos" class="nav__link">Proyectos</a></li>
-        <li><a href="#contacto" class="nav__link">Contacto</a></li>
+        <li><a href="index.html" class="nav__link active">Inicio</a></li>
+        <li><a href="quien-soy.html" class="nav__link">¿Quién soy?</a></li>
+        <li><a href="pmao.html" class="nav__link">P.M.A.O.</a></li>
+        <li><a href="tai.html" class="nav__link">T.A.I.</a></li>
+        <li><a href="tafq.html" class="nav__link">T.A.F.Q.</a></li>
       </ul>
 
       <button class="nav__toggle" id="nav-toggle" aria-label="Abrir menú">
@@ -29,116 +36,91 @@
   </header>
 
   <main>
-    <!-- ===== Inicio / Hero ===== -->
+    <!-- ===== Hero ===== -->
     <section class="hero container" id="inicio">
       <div class="hero__content reveal">
-        <p class="hero__greeting">Hola, soy</p>
-        <h1 class="hero__title">Iván García</h1>
-        <h2 class="hero__subtitle">Desarrollador de Software</h2>
+        <p class="hero__greeting">Portafolio Profesional · 2026</p>
+        <h1 class="hero__title">Avril Darix<br>San Martín Jiménez</h1>
+        <h2 class="hero__subtitle">4° Año Medio · Especialidad Química Industrial</h2>
         <p class="hero__description">
-          Me apasiona construir aplicaciones web y soluciones que resuelven
-          problemas reales. Bienvenido a mi portafolio.
+          Centro Politécnico Particular de Ñuñoa — Laboratorio Químico,
+          orientada al Control de Calidad de alimentos y líquidos.
         </p>
         <div class="hero__buttons">
-          <a href="#proyectos" class="btn btn--primary">Ver proyectos</a>
-          <a href="#contacto" class="btn btn--outline">Contáctame</a>
+          <a href="quien-soy.html" class="btn btn--primary">Conóceme</a>
+          <a href="pmao.html" class="btn btn--outline">Ver módulo P.M.A.O.</a>
         </div>
       </div>
       <div class="hero__image reveal">
-        <!-- Reemplaza assets/img/perfil.jpg por tu foto -->
-        <div class="hero__avatar" aria-hidden="true">IG</div>
+        <!-- Puedes reemplazar este círculo por una foto: <img src="assets/img/avril.jpg" alt="Avril San Martín"> -->
+        <div class="hero__avatar" aria-hidden="true">A</div>
       </div>
     </section>
 
-    <!-- ===== Sobre mí ===== -->
-    <section class="section container" id="sobre-mi">
-      <h2 class="section__title reveal">Sobre mí</h2>
-      <div class="about reveal">
+    <!-- ===== Presentación del portafolio (rúbrica: 10 a 20 líneas) ===== -->
+    <section class="section container" id="presentacion">
+      <h2 class="section__title reveal">Presentación</h2>
+      <div class="about article reveal">
         <p>
-          Soy un desarrollador enfocado en crear experiencias digitales limpias
-          y funcionales. Me gusta aprender nuevas tecnologías y aplicarlas en
-          proyectos propios. <!-- Edita este texto con tu historia: formación,
-          experiencia y lo que te motiva. -->
+          Te doy la bienvenida a mi portafolio profesional. Mi nombre es
+          <strong>Avril Darix San Martín Jiménez</strong> y soy estudiante de
+          4° Año Medio de la especialidad de <strong>Química Industrial</strong>,
+          mención Laboratorio Químico, del <strong>Centro Politécnico Particular
+          de Ñuñoa</strong>. Este portafolio reúne las evidencias más importantes
+          de mi proceso formativo durante el año 2026: aquí podrás conocer quién
+          soy, mi reflexión académica y laboral, y el desarrollo de los módulos
+          integrados <strong>P.M.A.O.</strong>, <strong>T.A.I.</strong> y
+          <strong>T.A.F.Q.</strong>. En la sección del módulo P.M.A.O. se
+          encuentra el <strong>Desafío N.º 1</strong> junto con los análisis de
+          laboratorio realizados: determinación de porcentaje de humedad,
+          porcentaje de cenizas, porcentaje de grasa, cromatografía y el informe
+          técnico correspondiente. Mi formación se ha orientado al
+          <strong>Control de Calidad en alimentos y líquidos</strong>, donde he
+          desarrollado experiencia práctica en espectrofotometría, titulaciones,
+          medición de pH y manejo de balanzas semi analítica y analítica, siempre
+          trabajando con registros, trazabilidad, uso de EPP y manejo responsable
+          de residuos. Este espacio refleja mi compromiso, rigurosidad y ganas de
+          crecer: busco mi primera oportunidad laboral para seguir desarrollándome
+          en el área de análisis y control de calidad. Te invito a recorrer cada
+          sección y conocer mi trabajo.
         </p>
-        <div class="about__stats">
-          <div class="stat">
-            <span class="stat__number">+2</span>
-            <span class="stat__label">Años aprendiendo</span>
-          </div>
-          <div class="stat">
-            <span class="stat__number">+5</span>
-            <span class="stat__label">Proyectos realizados</span>
-          </div>
-          <div class="stat">
-            <span class="stat__number">100%</span>
-            <span class="stat__label">Compromiso</span>
+      </div>
+    </section>
+
+    <!-- ===== Identidad del colegio (rúbrica: foto, mapa, especialidad, vínculos web/redes) ===== -->
+    <section class="section container" id="colegio">
+      <h2 class="section__title reveal">Mi colegio</h2>
+      <div class="two-col reveal">
+        <div class="school-info article">
+          <h3>Centro Politécnico Particular de Ñuñoa</h3>
+          <p>
+            Establecimiento de Educación Técnico Profesional ubicado en
+            <strong>Calle Nueva 1781, Ñuñoa</strong> (Región Metropolitana,
+            Santiago de Chile), que forma jóvenes con competencias y destrezas
+            técnicas y humanas. Curso la especialidad de
+            <strong>Química Industrial — Laboratorio Químico</strong>, donde se
+            desarrollan las competencias para desempeñarse en laboratorios de
+            análisis y control de calidad.
+          </p>
+          <!-- ⚠️ Guarda una foto del colegio como assets/img/colegio.jpg -->
+          <figure class="figure">
+            <img src="assets/img/colegio.jpg" alt="Fotografía del Centro Politécnico Particular de Ñuñoa" data-optional>
+            <figcaption>Centro Politécnico Particular de Ñuñoa</figcaption>
+          </figure>
+          <div class="school-links">
+            <a href="https://centropolitecnico.cl/" target="_blank" rel="noopener" class="btn btn--primary">🌐 Sitio web oficial</a>
+            <a href="https://www.facebook.com/cppnunoa/" target="_blank" rel="noopener" class="btn btn--outline">📘 Facebook</a>
           </div>
         </div>
-      </div>
-    </section>
-
-    <!-- ===== Habilidades ===== -->
-    <section class="section container" id="habilidades">
-      <h2 class="section__title reveal">Habilidades</h2>
-      <div class="skills reveal">
-        <!-- Agrega o quita tarjetas según tus tecnologías -->
-        <div class="skill-card"><span class="skill-card__icon">🌐</span><h3>HTML &amp; CSS</h3><p>Maquetación semántica y diseño responsivo.</p></div>
-        <div class="skill-card"><span class="skill-card__icon">⚡</span><h3>JavaScript</h3><p>Interactividad y lógica del lado del cliente.</p></div>
-        <div class="skill-card"><span class="skill-card__icon">🐍</span><h3>Python</h3><p>Scripts, automatización y backend.</p></div>
-        <div class="skill-card"><span class="skill-card__icon">🗄️</span><h3>Bases de datos</h3><p>Modelado y consultas SQL.</p></div>
-        <div class="skill-card"><span class="skill-card__icon">🔧</span><h3>Git &amp; GitHub</h3><p>Control de versiones y trabajo colaborativo.</p></div>
-        <div class="skill-card"><span class="skill-card__icon">📱</span><h3>Diseño responsivo</h3><p>Interfaces que se adaptan a cualquier pantalla.</p></div>
-      </div>
-    </section>
-
-    <!-- ===== Proyectos ===== -->
-    <section class="section container" id="proyectos">
-      <h2 class="section__title reveal">Proyectos</h2>
-      <div class="projects reveal">
-        <!-- Duplica este bloque <article> por cada proyecto tuyo -->
-        <article class="project-card">
-          <div class="project-card__image">📁</div>
-          <div class="project-card__body">
-            <h3>Nombre del proyecto</h3>
-            <p>Breve descripción del proyecto: qué hace, qué problema resuelve y qué tecnologías usaste.</p>
-            <div class="project-card__tags">
-              <span>HTML</span><span>CSS</span><span>JavaScript</span>
-            </div>
-            <div class="project-card__links">
-              <a href="https://github.com/Ivan1721" target="_blank" rel="noopener">Código</a>
-              <a href="#" target="_blank" rel="noopener">Demo</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="project-card">
-          <div class="project-card__image">🚀</div>
-          <div class="project-card__body">
-            <h3>Otro proyecto</h3>
-            <p>Breve descripción del proyecto: qué hace, qué problema resuelve y qué tecnologías usaste.</p>
-            <div class="project-card__tags">
-              <span>Python</span><span>SQL</span>
-            </div>
-            <div class="project-card__links">
-              <a href="https://github.com/Ivan1721" target="_blank" rel="noopener">Código</a>
-              <a href="#" target="_blank" rel="noopener">Demo</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="project-card">
-          <div class="project-card__image">💡</div>
-          <div class="project-card__body">
-            <h3>Proyecto futuro</h3>
-            <p>Breve descripción del proyecto: qué hace, qué problema resuelve y qué tecnologías usaste.</p>
-            <div class="project-card__tags">
-              <span>En desarrollo</span>
-            </div>
-            <div class="project-card__links">
-              <a href="https://github.com/Ivan1721" target="_blank" rel="noopener">Código</a>
-            </div>
-          </div>
-        </article>
+        <div>
+          <iframe
+            class="map-embed"
+            src="https://www.google.com/maps?q=Centro+Polit%C3%A9cnico+Particular+de+%C3%91u%C3%B1oa,+Calle+Nueva+1781,+%C3%91u%C3%B1oa,+Santiago&output=embed"
+            title="Mapa de ubicación del Centro Politécnico Particular de Ñuñoa"
+            loading="lazy"
+            allowfullscreen>
+          </iframe>
+        </div>
       </div>
     </section>
 
@@ -146,19 +128,27 @@
     <section class="section container" id="contacto">
       <h2 class="section__title reveal">Contacto</h2>
       <div class="contact reveal">
-        <p>¿Tienes un proyecto en mente o quieres trabajar conmigo? ¡Escríbeme!</p>
+        <p>Puedes escribirme o llamarme directamente:</p>
         <div class="contact__links">
-          <a href="mailto:garciaivan172@gmail.com" class="btn btn--primary">📧 Enviar correo</a>
-          <a href="https://github.com/Ivan1721" target="_blank" rel="noopener" class="btn btn--outline">GitHub</a>
-          <a href="https://www.linkedin.com/" target="_blank" rel="noopener" class="btn btn--outline">LinkedIn</a>
+          <a href="mailto:avrildarixsan@gmail.com" class="btn btn--primary">📧 avrildarixsan@gmail.com</a>
+          <a href="mailto:Jiménez.san@centropolitecnicoparticulardenunoa.cl" class="btn btn--outline">🏫 Correo institucional</a>
+          <a href="tel:+56920949878" class="btn btn--outline">📱 +56 9 2094 9878</a>
         </div>
       </div>
     </section>
   </main>
 
-  <!-- ===== Pie de página ===== -->
+  <!-- ===== Pie de página reglamentario ===== -->
   <footer class="footer">
-    <p>© 2026 Iván García — Hecho con 💻 y publicado en GitHub Pages</p>
+    <div class="container footer__content">
+      <p><strong>Portafolio Profesional 2026</strong> — Avril Darix San Martín Jiménez</p>
+      <p>4° Año Medio · Especialidad Química Industrial · Centro Politécnico Particular de Ñuñoa</p>
+      <p class="footer__contact">
+        <a href="mailto:avrildarixsan@gmail.com">avrildarixsan@gmail.com</a> ·
+        <a href="mailto:Jiménez.san@centropolitecnicoparticulardenunoa.cl">Jiménez.san@centropolitecnicoparticulardenunoa.cl</a> ·
+        <a href="tel:+56920949878">+56 9 2094 9878</a>
+      </p>
+    </div>
   </footer>
 
   <script src="js/main.js"></script>

@@ -6,3 +6,6 @@ desktop.ini
 # Editores
 .vscode/
 *.swp
+
+# Archivos de origen que no deben publicarse
+*.zip
