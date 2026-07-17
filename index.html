@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portafolio de Iván García — Desarrollador de software. Proyectos, habilidades y contacto.">
+  <title>Iván García | Portafolio</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- ===== Navegación ===== -->
+  <header class="header">
+    <nav class="nav container">
+      <a href="#inicio" class="nav__logo">Iván<span>.</span></a>
+
+      <ul class="nav__menu" id="nav-menu">
+        <li><a href="#inicio" class="nav__link active">Inicio</a></li>
+        <li><a href="#sobre-mi" class="nav__link">Sobre mí</a></li>
+        <li><a href="#habilidades" class="nav__link">Habilidades</a></li>
+        <li><a href="#proyectos" class="nav__link">Proyectos</a></li>
+        <li><a href="#contacto" class="nav__link">Contacto</a></li>
+      </ul>
+
+      <button class="nav__toggle" id="nav-toggle" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ===== Inicio / Hero ===== -->
+    <section class="hero container" id="inicio">
+      <div class="hero__content reveal">
+        <p class="hero__greeting">Hola, soy</p>
+        <h1 class="hero__title">Iván García</h1>
+        <h2 class="hero__subtitle">Desarrollador de Software</h2>
+        <p class="hero__description">
+          Me apasiona construir aplicaciones web y soluciones que resuelven
+          problemas reales. Bienvenido a mi portafolio.
+        </p>
+        <div class="hero__buttons">
+          <a href="#proyectos" class="btn btn--primary">Ver proyectos</a>
+          <a href="#contacto" class="btn btn--outline">Contáctame</a>
+        </div>
+      </div>
+      <div class="hero__image reveal">
+        <!-- Reemplaza assets/img/perfil.jpg por tu foto -->
+        <div class="hero__avatar" aria-hidden="true">IG</div>
+      </div>
+    </section>
+
+    <!-- ===== Sobre mí ===== -->
+    <section class="section container" id="sobre-mi">
+      <h2 class="section__title reveal">Sobre mí</h2>
+      <div class="about reveal">
+        <p>
+          Soy un desarrollador enfocado en crear experiencias digitales limpias
+          y funcionales. Me gusta aprender nuevas tecnologías y aplicarlas en
+          proyectos propios. <!-- Edita este texto con tu historia: formación,
+          experiencia y lo que te motiva. -->
+        </p>
+        <div class="about__stats">
+          <div class="stat">
+            <span class="stat__number">+2</span>
+            <span class="stat__label">Años aprendiendo</span>
+          </div>
+          <div class="stat">
+            <span class="stat__number">+5</span>
+            <span class="stat__label">Proyectos realizados</span>
+          </div>
+          <div class="stat">
+            <span class="stat__number">100%</span>
+            <span class="stat__label">Compromiso</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Habilidades ===== -->
+    <section class="section container" id="habilidades">
+      <h2 class="section__title reveal">Habilidades</h2>
+      <div class="skills reveal">
+        <!-- Agrega o quita tarjetas según tus tecnologías -->
+        <div class="skill-card"><span class="skill-card__icon">🌐</span><h3>HTML &amp; CSS</h3><p>Maquetación semántica y diseño responsivo.</p></div>
+        <div class="skill-card"><span class="skill-card__icon">⚡</span><h3>JavaScript</h3><p>Interactividad y lógica del lado del cliente.</p></div>
+        <div class="skill-card"><span class="skill-card__icon">🐍</span><h3>Python</h3><p>Scripts, automatización y backend.</p></div>
+        <div class="skill-card"><span class="skill-card__icon">🗄️</span><h3>Bases de datos</h3><p>Modelado y consultas SQL.</p></div>
+        <div class="skill-card"><span class="skill-card__icon">🔧</span><h3>Git &amp; GitHub</h3><p>Control de versiones y trabajo colaborativo.</p></div>
+        <div class="skill-card"><span class="skill-card__icon">📱</span><h3>Diseño responsivo</h3><p>Interfaces que se adaptan a cualquier pantalla.</p></div>
+      </div>
+    </section>
+
+    <!-- ===== Proyectos ===== -->
+    <section class="section container" id="proyectos">
+      <h2 class="section__title reveal">Proyectos</h2>
+      <div class="projects reveal">
+        <!-- Duplica este bloque <article> por cada proyecto tuyo -->
+        <article class="project-card">
+          <div class="project-card__image">📁</div>
+          <div class="project-card__body">
+            <h3>Nombre del proyecto</h3>
+            <p>Breve descripción del proyecto: qué hace, qué problema resuelve y qué tecnologías usaste.</p>
+            <div class="project-card__tags">
+              <span>HTML</span><span>CSS</span><span>JavaScript</span>
+            </div>
+            <div class="project-card__links">
+              <a href="https://github.com/Ivan1721" target="_blank" rel="noopener">Código</a>
+              <a href="#" target="_blank" rel="noopener">Demo</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-card__image">🚀</div>
+          <div class="project-card__body">
+            <h3>Otro proyecto</h3>
+            <p>Breve descripción del proyecto: qué hace, qué problema resuelve y qué tecnologías usaste.</p>
+            <div class="project-card__tags">
+              <span>Python</span><span>SQL</span>
+            </div>
+            <div class="project-card__links">
+              <a href="https://github.com/Ivan1721" target="_blank" rel="noopener">Código</a>
+              <a href="#" target="_blank" rel="noopener">Demo</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-card__image">💡</div>
+          <div class="project-card__body">
+            <h3>Proyecto futuro</h3>
+            <p>Breve descripción del proyecto: qué hace, qué problema resuelve y qué tecnologías usaste.</p>
+            <div class="project-card__tags">
+              <span>En desarrollo</span>
+            </div>
+            <div class="project-card__links">
+              <a href="https://github.com/Ivan1721" target="_blank" rel="noopener">Código</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== Contacto ===== -->
+    <section class="section container" id="contacto">
+      <h2 class="section__title reveal">Contacto</h2>
+      <div class="contact reveal">
+        <p>¿Tienes un proyecto en mente o quieres trabajar conmigo? ¡Escríbeme!</p>
+        <div class="contact__links">
+          <a href="mailto:garciaivan172@gmail.com" class="btn btn--primary">📧 Enviar correo</a>
+          <a href="https://github.com/Ivan1721" target="_blank" rel="noopener" class="btn btn--outline">GitHub</a>
+          <a href="https://www.linkedin.com/" target="_blank" rel="noopener" class="btn btn--outline">LinkedIn</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Pie de página ===== -->
+  <footer class="footer">
+    <p>© 2026 Iván García — Hecho con 💻 y publicado en GitHub Pages</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
