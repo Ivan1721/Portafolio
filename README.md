@@ -9,7 +9,7 @@ sin herramientas de compilación: se abre `index.html` en el navegador o se publ
 |---|---|
 | `Ivan` | Este portafolio académico (contenido completo desde el 21-10-2026) |
 | `avi` | Portafolio estudiantil de Avril San Martín (copia de `master` del 21-10-2026) |
-| `master` | El mismo portafolio de Avril; GitHub Pages publica desde aquí (<https://ivan1721.github.io/Portafolio/>) |
+| `master` | Este portafolio académico desde el pull request de `Ivan` (21-10-2026); GitHub Pages publica desde aquí (<https://ivan1721.github.io/Portafolio/>) |
 
 ## Estructura
 

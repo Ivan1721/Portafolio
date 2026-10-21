@@ -11,9 +11,9 @@ distintas:
 |---|---|---|
 | `Ivan` | Portafolio académico de Iván García-Fernández (contenido completo desde el 21-10-2026) | rama de trabajo local |
 | `avi` | Portafolio estudiantil de Avril San Martín (copia de `master` del 21-10-2026) | |
-| `master` | El portafolio de Avril; **GitHub Pages publica desde aquí** | no tocar sin pedirlo: cambia el sitio público |
+| `master` | El portafolio académico de Iván, que llega por pull request desde `Ivan`; **GitHub Pages publica desde aquí** | no subir directo: cambia el sitio público |
 
-`Ivan` es una rama huérfana: no comparte historial con `master` ni con `avi`. No unirlas.
+`Ivan` nació huérfana; el 21-10-2026 se le unió el historial de `master` (merge con estrategia *ours*, sin traer archivos de Avril) para poder abrir pull requests de `Ivan` a `master`. El portafolio de Avril sigue completo en `avi`; no unir `avi` con `Ivan`.
 
 ## Acceso a GitHub (SSH)
 
