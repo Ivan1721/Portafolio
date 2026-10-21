@@ -1,11 +1,6 @@
-# Sistema operativo
 Thumbs.db
 desktop.ini
 .DS_Store
-
-# Editores
 .vscode/
 *.swp
-
-# Archivos de origen que no deben publicarse
 *.zip

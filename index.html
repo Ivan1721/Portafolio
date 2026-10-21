@@ -1,152 +1,89 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Portafolio Profesional de Avril Darix San Martín Jiménez — 4° Año Medio, Especialidad Química Industrial, Centro Politécnico Particular de Ñuñoa (2026).">
-  <title>Inicio | Portafolio Profesional — Avril San Martín</title>
-  <link rel="stylesheet" href="css/styles.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Inicio | Iván García-Fernández</title>
+  <meta name="description" content="Iván García-Fernández, doctorando en Ingeniería de Sistemas Avanzados (UNAB): percepción activa con brazos robóticos para la cosecha de frutos ocluidos, con el humano en el lazo.">
+  <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
-
-  <!-- ===== Encabezado: insignia + nombre + menú (Inicio, ¿Quién soy?, P.M.A.O., T.A.I., T.A.F.Q.) ===== -->
-  <header class="header">
-    <nav class="nav container">
-      <a href="index.html" class="nav__brand">
-        <img src="assets/img/insignia.png" alt="Insignia del Centro Politécnico Particular de Ñuñoa" class="nav__badge" data-optional>
-        <span class="nav__brand-text">
-          <strong>Avril San Martín J.</strong>
-          <small>Portafolio Profesional · Química Industrial</small>
-        </span>
-      </a>
-
-      <ul class="nav__menu" id="nav-menu">
-        <li><a href="index.html" class="nav__link active">Inicio</a></li>
-        <li><a href="quien-soy.html" class="nav__link">¿Quién soy?</a></li>
-        <li><a href="pmao.html" class="nav__link">P.M.A.O.</a></li>
-        <li><a href="tai.html" class="nav__link">T.A.I.</a></li>
-        <li><a href="tafq.html" class="nav__link">T.A.F.Q.</a></li>
+  <header class="cabecera">
+    <nav class="nav contenedor">
+      <a href="index.html" class="nav__marca">Iván García-Fernández</a>
+      <button class="nav__boton" aria-label="Abrir menú" aria-expanded="false">☰</button>
+      <ul class="nav__lista">
+        <li><a href="index.html" class="nav__link activo" aria-current="page">Inicio</a></li>
+        <li><a href="investigacion.html" class="nav__link">Investigación</a></li>
+        <li><a href="trayectoria.html" class="nav__link">Trayectoria</a></li>
+        <li><a href="publicaciones.html" class="nav__link">Publicaciones</a></li>
+        <li><a href="proyectos.html" class="nav__link">Proyectos</a></li>
+        <li><a href="docencia.html" class="nav__link">Docencia</a></li>
+        <li><a href="cv.html" class="nav__link">CV</a></li>
       </ul>
-
-      <button class="nav__toggle" id="nav-toggle" aria-label="Abrir menú">
-        <span></span><span></span><span></span>
-      </button>
     </nav>
   </header>
-
-  <main>
-    <!-- ===== Hero ===== -->
-    <section class="hero container" id="inicio">
-      <div class="hero__content reveal">
-        <p class="hero__greeting">Portafolio Profesional · 2026</p>
-        <h1 class="hero__title">Avril Darix<br>San Martín Jiménez</h1>
-        <h2 class="hero__subtitle">4° Año Medio · Especialidad Química Industrial</h2>
-        <p class="hero__description">
-          Centro Politécnico Particular de Ñuñoa — Laboratorio Químico,
-          orientada al Control de Calidad de alimentos y líquidos.
-        </p>
-        <div class="hero__buttons">
-          <a href="quien-soy.html" class="btn btn--primary">Sobre mí</a>
-          <a href="pmao.html" class="btn btn--outline">Ver módulo P.M.A.O.</a>
-        </div>
-      </div>
-      <div class="hero__image reveal">
-        <!-- Puedes reemplazar este círculo por una foto: <img src="assets/img/avril.jpg" alt="Avril San Martín"> -->
-        <div class="hero__avatar" aria-hidden="true">A</div>
-      </div>
-    </section>
-
-    <!-- ===== Presentación del portafolio (rúbrica: 10 a 20 líneas) ===== -->
-    <section class="section container" id="presentacion">
-      <h2 class="section__title reveal">Presentación</h2>
-      <div class="about article reveal">
-        <p>
-          Te doy la bienvenida a mi portafolio profesional. Mi nombre es
-          <strong>Avril Darix San Martín Jiménez</strong> y soy estudiante de
-          4° Año Medio de la especialidad de <strong>Química Industrial</strong>,
-          mención Laboratorio Químico, del <strong>Centro Politécnico Particular
-          de Ñuñoa</strong>. Este portafolio reúne las evidencias más importantes
-          de mi proceso formativo durante el año 2026: aquí podrás conocer quién
-          soy, mi reflexión académica y laboral, y el desarrollo de los módulos
-          integrados <strong>P.M.A.O.</strong>, <strong>T.A.I.</strong> y
-          <strong>T.A.F.Q.</strong>. En la sección del módulo P.M.A.O. se
-          encuentra el <strong>Desafío N.º 1</strong> junto con los análisis de
-          laboratorio realizados: determinación de porcentaje de humedad,
-          porcentaje de cenizas, porcentaje de grasa, cromatografía y el informe
-          técnico correspondiente. Mi formación se ha orientado al
-          <strong>Control de Calidad en alimentos y líquidos</strong>, donde he
-          desarrollado experiencia práctica en espectrofotometría, titulaciones,
-          medición de pH y manejo de balanzas semi analítica y analítica, siempre
-          trabajando con registros, trazabilidad, uso de EPP y manejo responsable
-          de residuos. Este espacio refleja mi compromiso, rigurosidad y ganas de
-          crecer: busco mi primera oportunidad laboral para seguir desarrollándome
-          en el área de análisis y control de calidad. Te invito a recorrer cada
-          sección y conocer mi trabajo.
+  <main class="contenedor">
+    <section class="perfil">
+      <img class="perfil__foto" src="assets/img/foto.jpg" alt="Foto de Iván García-Fernández" onerror="this.classList.add('perfil__foto--vacia')">
+      <div>
+        <h1>Iván García-Fernández</h1>
+        <p class="perfil__cargo">Doctorando en Ingeniería de Sistemas Avanzados · Universidad Andrés Bello · Santiago, Chile</p>
+        <p class="lead">Soy Ingeniero en Automatización y Robótica (UNAB, 2024, Magna Cum Laude) e investigo en el grupo de
+        robótica del Dr. Juan Pablo Vásconez. Mi tesis trata la <strong>percepción activa con brazos robóticos para la cosecha
+        de frutos ocluidos</strong>: un brazo con cámara elige la vista que revela un fruto tapado por hojas y ramas
+        considerando lo que verá el detector, si el brazo puede llegar a esa vista y cuándo conviene pedir ayuda al operador
+        humano.</p>
+        <p class="botones">
+          <a class="boton" href="investigacion.html">Investigación</a>
+          <a class="boton boton--borde" href="trayectoria.html">Trayectoria</a>
+          <a class="boton boton--borde" href="cv.html">CV</a>
         </p>
       </div>
     </section>
 
-    <!-- ===== Identidad del colegio (rúbrica: foto, mapa, especialidad, vínculos web/redes) ===== -->
-    <section class="section container" id="colegio">
-      <h2 class="section__title reveal">Mi colegio</h2>
-      <div class="two-col reveal">
-        <div class="school-info article">
-          <h3>Centro Politécnico Particular de Ñuñoa</h3>
-          <p>
-            Establecimiento de Educación Técnico Profesional ubicado en
-            <strong>Calle Nueva 1781, Ñuñoa</strong> (Región Metropolitana,
-            Santiago de Chile), que forma jóvenes con competencias y destrezas
-            técnicas y humanas. Curso la especialidad de
-            <strong>Química Industrial — Laboratorio Químico</strong>, donde se
-            desarrollan las competencias para desempeñarse en laboratorios de
-            análisis y control de calidad.
-          </p>
-          <figure class="figure">
-            <img src="assets/img/colegio.jpg" alt="Fotografía del Centro Politécnico Particular de Ñuñoa" data-optional>
-            <figcaption>Centro Politécnico Particular de Ñuñoa</figcaption>
-          </figure>
-          <div class="school-links">
-            <a href="https://centropolitecnico.cl/" target="_blank" rel="noopener" class="btn btn--primary">🌐 Sitio web oficial</a>
-            <a href="https://www.facebook.com/cppnunoa/" target="_blank" rel="noopener" class="btn btn--outline">📘 Facebook</a>
-          </div>
-        </div>
-        <div>
-          <iframe
-            class="map-embed"
-            src="https://www.google.com/maps?q=Centro+Polit%C3%A9cnico+Particular+de+%C3%91u%C3%B1oa,+Calle+Nueva+1781,+%C3%91u%C3%B1oa,+Santiago&output=embed"
-            title="Mapa de ubicación del Centro Politécnico Particular de Ñuñoa"
-            loading="lazy"
-            allowfullscreen>
-          </iframe>
-        </div>
-      </div>
+    <ul class="cifras" aria-label="Resumen en cifras">
+      <li><strong>318</strong><span>estudios en mi revisión sistemática de percepción activa (PRISMA 2020)</span></li>
+      <li><strong>4</strong><span>artículos en congresos (Springer CCIS e IEEE), uno aceptado para noviembre de 2026</span></li>
+      <li><strong>2</strong><span>manuscritos para <em>Biosystems Engineering</em>: uno en revisión y uno por enviar</span></li>
+      <li><strong>4</strong><span>proyectos de I+D como colaborador (Fondecyt, Núcleo Milenio, Endowment UNAB y Prueba de Concepto UNAB)</span></li>
+    </ul>
+
+    <section>
+      <h2>Intereses de investigación</h2>
+      <ul class="etiquetas">
+        <li>Percepción activa</li><li>Siguiente mejor vista (NBV)</li><li>Manipulación robótica</li>
+        <li>Robótica agrícola</li><li>Humano en el lazo</li><li>Interacción humano-robot</li>
+        <li>Segmentación de instancias bajo oclusión</li><li>Aprendizaje por demostración</li><li>ROS 2 y Gazebo</li>
+      </ul>
     </section>
 
-    <!-- ===== Contacto ===== -->
-    <section class="section container" id="contacto">
-      <h2 class="section__title reveal">Contacto</h2>
-      <div class="contact reveal">
-        <p>Puedes escribirme o llamarme directamente:</p>
-        <div class="contact__links">
-          <a href="mailto:avrildarixsan@gmail.com" class="btn btn--primary">📧 avrildarixsan@gmail.com</a>
-          <a href="mailto:jimenez.san@centropolitecnicoparticulardenunoa.cl" class="btn btn--outline">🏫 Correo institucional</a>
-        </div>
-      </div>
+    <figure class="figura figura--lamina">
+      <img src="assets/img/plataforma.svg" alt="Ilustración de la plataforma: un robot Scout 2.0 tira un remolque con plataforma elevable que lleva una caja con manzanas y el brazo PiPER con la pinza Pika" loading="lazy">
+      <figcaption>La plataforma de mi tesis: un robot AgileX Scout 2.0 tira un remolque con plataforma elevable que lleva el
+      brazo AgileX PiPER con la pinza Pika (cámaras RealSense D405 y ojo de pez en la muñeca) y las cajas cosecheras.</figcaption>
+    </figure>
+
+    <section>
+      <h2>Noticias</h2>
+      <ul class="noticias">
+        <li><time datetime="2026-11">nov. 2026</time> <span>Presentaré en ARTIIS 2026 el estudio de segmentación de frutos bajo oclusión (YOLO11, YOLO26 y Mask2Former), aceptado para Springer CCIS.</span></li>
+        <li><time datetime="2026-10">oct. 2026</time> <span>Entregué el proyecto de tesis; el examen de candidatura está propuesto para el 26 de noviembre de 2026.</span></li>
+        <li><time datetime="2026-10">oct. 2026</time> <span>Enviamos a <em>Biosystems Engineering</em> el manuscrito sobre cuánto escala un robot de transporte en la cosecha humano-robot de palta.</span></li>
+        <li><time datetime="2026-10">oct. 2026</time> <span>Activamos la Rama Estudiantil IEEE de la UNAB y su capítulo de la Robotics and Automation Society; presido la rama.</span></li>
+        <li><time datetime="2026-07">jul. 2026</time> <span>Participé en la 3rd Summer School for Systems &amp; Software Engineering in Robotics de TU Delft (Países Bajos, 40 horas).</span></li>
+        <li><time datetime="2025-11">nov. 2025</time> <span>Presenté en RICAI 2025 (IEEE), en Hangzhou, China, la evaluación de interacción humano-robot en un sistema de dos robots teleoperados.</span></li>
+      </ul>
+      <p class="nota">Toda la historia, año por año, está en <a href="trayectoria.html">Trayectoria</a>.</p>
     </section>
+
   </main>
-
-  <!-- ===== Pie de página reglamentario ===== -->
-  <footer class="footer">
-    <div class="container footer__content">
-      <p><strong>Portafolio Profesional 2026</strong> — Avril Darix San Martín Jiménez</p>
-      <p>4° Año Medio · Especialidad Química Industrial · Centro Politécnico Particular de Ñuñoa</p>
-      <p class="footer__contact">
-        <a href="mailto:avrildarixsan@gmail.com">avrildarixsan@gmail.com</a> ·
-        <a href="mailto:jimenez.san@centropolitecnicoparticulardenunoa.cl">jimenez.san@centropolitecnicoparticulardenunoa.cl</a>
-      </p>
+  <footer class="pie">
+    <div class="contenedor">
+      <p>Iván García-Fernández · Doctorado en Ingeniería de Sistemas Avanzados · Universidad Andrés Bello, Santiago, Chile</p>
+      <p><a href="mailto:i.garciafernandez@uandresbello.edu">i.garciafernandez@uandresbello.edu</a> · <a href="https://github.com/Ivan1721">GitHub</a> · <a href="https://orcid.org/0009-0005-4235-9913">ORCID</a> · <span class="falta">[Google Scholar]</span> · <span class="falta">[LinkedIn]</span></p>
     </div>
   </footer>
-
   <script src="js/main.js"></script>
 </body>
 </html>

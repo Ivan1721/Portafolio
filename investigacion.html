@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Investigación | Iván García-Fernández</title>
+  <meta name="description" content="Líneas de investigación: percepción activa para la cosecha de frutos ocluidos, revisión sistemática, segmentación bajo oclusión, colaboración humano-robot en la cosecha e interacción humano-robot.">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <header class="cabecera">
+    <nav class="nav contenedor">
+      <a href="index.html" class="nav__marca">Iván García-Fernández</a>
+      <button class="nav__boton" aria-label="Abrir menú" aria-expanded="false">☰</button>
+      <ul class="nav__lista">
+        <li><a href="index.html" class="nav__link">Inicio</a></li>
+        <li><a href="investigacion.html" class="nav__link activo" aria-current="page">Investigación</a></li>
+        <li><a href="trayectoria.html" class="nav__link">Trayectoria</a></li>
+        <li><a href="publicaciones.html" class="nav__link">Publicaciones</a></li>
+        <li><a href="proyectos.html" class="nav__link">Proyectos</a></li>
+        <li><a href="docencia.html" class="nav__link">Docencia</a></li>
+        <li><a href="cv.html" class="nav__link">CV</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="contenedor">
+    <h1>Investigación</h1>
+    <p class="lead">La cosecha y el transporte de fruta dependen de una mano de obra cada vez más escasa, y los robots
+    cosechadores fallan sobre todo por percepción: hojas, ramas y frutos vecinos ocultan el objetivo, y una cámara fija no
+    logra verlo. Mi trabajo avanza desde la visión por computador y la interacción humano-robot hacia la
+    <strong>percepción activa</strong>: mover la cámara montada en el brazo hacia la vista que mejor revela el fruto, sin
+    perder de vista que el brazo tiene que poder llegar ahí y que el operador sigue presente en el huerto.</p>
+
+    <article class="tarjeta" id="tesis">
+      <h2>Percepción activa con el humano en el lazo para frutos ocluidos</h2>
+      <p class="tarjeta__meta">Tesis doctoral, Doctorado en Ingeniería de Sistemas Avanzados (UNAB), 2025–presente · Profesor guía: Dr. Juan Pablo Vásconez · Co-guía: Dra. Catalina González Castaño</p>
+      <p>Título provisional: <em>Percepción activa con el humano en el lazo para la cosecha robótica de frutos ocluidos:
+      planificación de vistas y aprendizaje por demostración del efector final en un manipulador móvil</em>.</p>
+      <ul class="datos">
+        <li><strong>Pregunta.</strong> ¿Cómo cambia la capacidad de un brazo con cámara en la muñeca para revelar frutos
+        ocluidos cuando la elección de la vista considera la visibilidad estimada del fruto, la alcanzabilidad del brazo y
+        la posibilidad de ceder el control al operador?</li>
+        <li><strong>Hipótesis.</strong> Con el mismo número de vistas, una política consciente de la visibilidad y de la
+        ejecución revela más frutos severamente ocluidos que las vistas fijas, aleatorias y un planificador volumétrico; y
+        ceder el control al operador ante un fallo eleva el éxito con menor carga de trabajo que la teleoperación completa.</li>
+        <li><strong>Objetivos.</strong> (1) Estimar la fracción visible de cada fruto con segmentación de instancias y modelar
+        cómo cae la detección con la oclusión. (2) Diseñar políticas de vista que combinen visibilidad esperada, ganancia de
+        información y alcanzabilidad del brazo. (3) Un modo de respaldo en que el operador recupera el fruto con el Pika
+        Sense, del que se aprenden vistas a partir de las demostraciones del efector final. (4) Validar el sistema integrado
+        en invernadero o huerto.</li>
+        <li><strong>Método.</strong> Ciclos de diseño y evaluación en ROS 2: simulación en Gazebo con oclusión controlada
+        por nivel de visibilidad (25 a 100 %), laboratorio, estudio con usuarios y ensayo en huerto.</li>
+        <li><strong>Plataforma.</strong> Brazo AgileX PiPER con la pinza Pika (RealSense D405 y cámara ojo de pez en la
+        muñeca), sobre un remolque con plataforma elevable tirado por un robot AgileX Scout 2.0.</li>
+      </ul>
+      <figure class="figura">
+        <img src="assets/img/metodo_nbv.png" alt="Diagrama del ciclo de percepción activa: cámara D405, segmentación, vistas candidatas, filtro de alcanzabilidad, puntaje, decisión por umbral de visibilidad, respaldo del operador con Pika Sense y demostraciones registradas" loading="lazy">
+        <figcaption>Ciclo propuesto. La segmentación estima la fracción visible del fruto (OE1); la política genera vistas
+        alrededor del fruto, descarta las que el brazo no alcanza y elige la de mayor puntaje (OE2); si ninguna llega al
+        umbral, el operador toma el control con el Pika Sense y su demostración queda registrada (OE3). Todo corre sobre la
+        plataforma móvil de cosecha (OE4).</figcaption>
+      </figure>
+      <h3>Resultados preliminares</h3>
+      <p>En la simulación del PiPER con la pinza Pika frente a un muro frutal de manzano generado con Helios, de 20 vistas
+      candidatas a 0,30 m de la manzana objetivo solo 4 resultaron alcanzables: 8 acercan la cámara o las garras a menos de
+      3 cm de una rama y las otras 8 quedan fuera de la cinemática del brazo. La vista frontal ve el 39 % de la manzana y la
+      mejor alcanzable el 69 %; con follaje denso, la diferencia es de 7 % a 96 %. La visibilidad calculada por trazado de
+      rayos coincide con la medida en la imagen del simulador con un error medio de 2,6 puntos.</p>
+      <figure class="figura">
+        <img src="assets/img/escena_nbv.jpg" alt="Escena simulada: el brazo PiPER frente a un manzano con las vistas candidatas alrededor de una manzana, y dos imágenes de la cámara desde la vista frontal y desde la vista elegida" loading="lazy">
+        <figcaption>(a) Las 20 vistas candidatas alrededor de la manzana objetivo, con las alcanzables en color y la elegida
+        en rojo; (b) lo que ve la cámara desde la vista frontal (39 % visible); (c) desde la vista elegida (69 %).
+        Código: <a href="https://github.com/Ivan1721/pika_ros/tree/sim-gazebo">pika_ros, rama sim-gazebo</a>.</figcaption>
+      </figure>
+    </article>
+
+    <article class="tarjeta" id="revision">
+      <h2>Revisión sistemática del estado del arte</h2>
+      <p class="tarjeta__meta">PRISMA 2020 · 2015–2026 · manuscrito para <em>Biosystems Engineering</em></p>
+      <div class="dos-columnas">
+        <div>
+          <p>Revisé la percepción activa con manipuladores, con foco en agricultura y con el rol del operador humano como eje
+          de la taxonomía. Crucé Scopus, IEEE Xplore y arXiv con búsqueda por citas e incluí <strong>318 estudios</strong>:
+          237 con un manipulador que lleva el sensor y 64 agrícolas. Cada estudio se verificó contra sus figuras y tablas, y
+          los datos, la codificación y los scripts están versionados.</p>
+          <p>Tres vacíos orientan la tesis:</p>
+          <ul class="datos">
+            <li>solo 20 estudios probaron el robot en campo o invernadero, y apenas 4 compararon allí planificadores de vista;</li>
+            <li>solo 98 de los 237 estudios con manipulador consideran si el brazo puede alcanzar la vista elegida;</li>
+            <li>el humano participa en 59 de los 318 estudios, pero en solo 7 de los 64 agrícolas, y ninguno lo usa como
+            respaldo cuando la percepción autónoma falla.</li>
+          </ul>
+        </div>
+        <figure class="figura figura--lamina">
+          <img src="assets/img/esfera_vistas.svg" alt="Ilustración de una esfera de vistas: cámaras con sus pirámides de visión alrededor de una manzana tapada por hojas; una elegida, otras candidatas y algunas descartadas" loading="lazy">
+          <figcaption>Planificación de la siguiente mejor vista: vistas candidatas alrededor del fruto ocluido.</figcaption>
+        </figure>
+      </div>
+    </article>
+
+    <article class="tarjeta" id="segmentacion">
+      <h2>Segmentación de frutos bajo oclusión</h2>
+      <p class="tarjeta__meta">ARTIIS 2026 (Springer CCIS), aceptado · <a href="https://github.com/Ivan1721/Ultralytics">código</a></p>
+      <div class="dos-columnas">
+        <div>
+          <p>Comparé YOLO11-seg, YOLO26-seg y Mask2Former en la segmentación de instancias de frutos según su nivel de
+          visibilidad. Mask2Former alcanzó un 61,01 % de mAP50–95 de máscara y fue el más robusto bajo oclusión severa;
+          YOLO11m llegó a 51,97 %. La curva de calidad del detector por nivel de
+          visibilidad es la base de la utilidad de vista de la tesis (OE1).</p>
+        </div>
+        <figure class="figura">
+          <img src="assets/img/segmentacion_d405.jpg" alt="Imagen de la cámara D405 de la pinza: una manzana roja entre hojas segmentada por YOLO11 con 0,93 de confianza; se ven los dedos de la pinza Pika abajo" loading="lazy">
+          <figcaption>YOLO11 sobre una imagen de la cámara D405 de la pinza Pika: manzana roja entre hojas.</figcaption>
+        </figure>
+      </div>
+    </article>
+
+    <article class="tarjeta" id="cosecha">
+      <h2>Colaboración humano-robot en la cosecha</h2>
+      <p class="tarjeta__meta">Manuscrito enviado a <em>Biosystems Engineering</em> (en revisión) · <a href="https://ivan1721.github.io/harvest-viz/">demostración interactiva</a></p>
+      <p>Simulé cuadrillas de cosecha de palta con y sin un robot de transporte que lleva la fruta al acopio, y construí
+      modelos sustitutos validados que predicen la producción y la carga de trabajo de los cosecheros. El robot elevó la
+      fruta cosechada entre 20 y 22 % para equipos de 4 a 24 trabajadores. HarvestView, la maqueta 3D en el navegador,
+      reproduce y extiende esas corridas a otros huertos, cuadrillas y robots.</p>
+    </article>
+
+    <article class="tarjeta" id="hri">
+      <h2>Interacción humano-robot</h2>
+      <p class="tarjeta__meta">ARTIIS 2024 (Springer CCIS) · RICAI 2025 (IEEE)</p>
+      <div class="dos-columnas">
+        <div>
+          <p>Mi tesis de pregrado controló un brazo de 6 grados de libertad con gestos de la mano detectados con YOLO, una
+          forma de comunicación no verbal con el robot. En el doctorado evalué la interacción humano-robot en un sistema de
+          dos robots teleoperados. Ambas líneas alimentan el modo de respaldo de la tesis, en el que el operador toma el
+          control cuando la percepción autónoma falla.</p>
+        </div>
+        <figure class="figura figura--lamina">
+          <img src="assets/img/operador.svg" alt="Ilustración de un operador con gorra y chaqueta que revisa en una tableta la imagen de un fruto detectado y la confirma" loading="lazy">
+          <figcaption>El operador como respaldo: revisa la detección y confirma o corrige.</figcaption>
+        </figure>
+      </div>
+    </article>
+
+  </main>
+  <footer class="pie">
+    <div class="contenedor">
+      <p>Iván García-Fernández · Doctorado en Ingeniería de Sistemas Avanzados · Universidad Andrés Bello, Santiago, Chile</p>
+      <p><a href="mailto:i.garciafernandez@uandresbello.edu">i.garciafernandez@uandresbello.edu</a> · <a href="https://github.com/Ivan1721">GitHub</a> · <a href="https://orcid.org/0009-0005-4235-9913">ORCID</a> · <span class="falta">[Google Scholar]</span> · <span class="falta">[LinkedIn]</span></p>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+</body>
+</html>

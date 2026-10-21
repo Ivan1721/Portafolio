@@ -1,0 +1,159 @@
+/* Portafolio académico: sobrio, legible y con modo oscuro automático */
+:root {
+  --fondo: #fbfbfa;
+  --superficie: #ffffff;
+  --texto: #1f2328;
+  --suave: #5b636b;
+  --borde: #e2e4e7;
+  --acento: #0b7285;
+  --acento-suave: #e3f2f5;
+  --coral: #c2410c;
+  --ambar: #a16207;
+  --verde: #1f7a4d;
+  --violeta: #5b34b8;
+  --lamina: #ffffff;
+  --falta-fondo: #fff4d6;
+  --falta-texto: #7a5300;
+  --ancho: 960px;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --fondo: #14171a;
+    --superficie: #1b1f23;
+    --texto: #e6e8ea;
+    --suave: #a3aab2;
+    --borde: #2c3238;
+    --acento: #4fb8c7;
+    --acento-suave: #16313a;
+    --coral: #f2895a;
+    --ambar: #e5b453;
+    --verde: #6cc08b;
+    --violeta: #a78bfa;
+    --lamina: #f4f5f6;
+    --falta-fondo: #3a2f12;
+    --falta-texto: #f3cf7a;
+  }
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--fondo);
+  color: var(--texto);
+  font: 16px/1.65 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+a { color: var(--acento); }
+h1, h2, h3 { line-height: 1.25; }
+h1 { font-size: 1.9rem; margin: 2rem 0 0.75rem; }
+h2 { font-size: 1.3rem; margin: 2.2rem 0 0.6rem; }
+h3 { font-size: 1.05rem; margin: 1.2rem 0 0.4rem; }
+img { max-width: 100%; height: auto; }
+.contenedor { max-width: var(--ancho); margin: 0 auto; padding: 0 16px; }
+.lead { font-size: 1.08rem; }
+
+/* Navegación */
+.cabecera { border-bottom: 1px solid var(--borde); background: var(--superficie); position: sticky; top: 0; z-index: 10; }
+.nav { display: flex; align-items: center; justify-content: space-between; min-height: 56px; gap: 1rem; }
+.nav__marca { font-weight: 600; color: var(--texto); text-decoration: none; white-space: nowrap; }
+.nav__lista { display: flex; gap: 1rem; list-style: none; margin: 0; padding: 0; }
+.nav__link { color: var(--suave); text-decoration: none; }
+.nav__link.activo, .nav__link:hover { color: var(--acento); }
+.nav__boton { display: none; background: none; border: 0; font-size: 1.4rem; color: var(--texto); cursor: pointer; }
+@media (max-width: 820px) {
+  .nav__boton { display: block; }
+  .nav__lista { display: none; position: absolute; top: 56px; left: 0; right: 0; flex-direction: column;
+                gap: 0; background: var(--superficie); border-bottom: 1px solid var(--borde); padding: 0.5rem 16px; }
+  .nav__lista.abierta { display: flex; }
+  .nav__lista li { padding: 0.4rem 0; }
+}
+
+/* Inicio */
+.perfil { display: grid; grid-template-columns: 180px 1fr; gap: 2rem; align-items: start; margin-top: 2rem; }
+.perfil h1 { margin-top: 0; }
+.perfil__foto { width: 180px; height: 180px; object-fit: cover; border-radius: 50%; border: 1px solid var(--borde); }
+.perfil__foto--vacia { background: var(--borde); color: transparent; font-size: 0; }
+.perfil__cargo { color: var(--suave); margin-top: -0.4rem; }
+@media (max-width: 640px) { .perfil { grid-template-columns: 1fr; } .perfil__foto { width: 140px; height: 140px; } }
+.cifras { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 0.75rem; list-style: none; padding: 0; margin: 1.5rem 0 0; }
+.cifras li { background: var(--superficie); border: 1px solid var(--borde); border-radius: 8px; padding: 0.75rem 1rem; }
+.cifras strong { display: block; font-size: 1.6rem; line-height: 1.2; color: var(--acento); }
+.cifras span { color: var(--suave); font-size: 0.92rem; }
+
+/* Componentes */
+.botones { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+.boton { display: inline-block; padding: 0.45rem 1rem; border-radius: 6px; background: var(--acento); color: #fff; text-decoration: none; border: 1px solid var(--acento); font: inherit; cursor: pointer; }
+.boton--borde { background: none; color: var(--acento); }
+.etiquetas { display: flex; flex-wrap: wrap; gap: 0.5rem; list-style: none; padding: 0; }
+.etiquetas li { border: 1px solid var(--borde); border-radius: 999px; padding: 0.15rem 0.75rem; font-size: 0.9rem; background: var(--superficie); }
+.tarjeta { background: var(--superficie); border: 1px solid var(--borde); border-radius: 8px; padding: 0.5rem 1.25rem 1rem; margin: 1rem 0; }
+.tarjeta h2 { margin-top: 0.9rem; }
+.tarjeta__meta { color: var(--suave); font-size: 0.92rem; margin-top: -0.3rem; }
+.rejilla { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; }
+.rejilla .tarjeta { margin: 0; }
+.dos-columnas { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; align-items: start; }
+@media (max-width: 720px) { .dos-columnas { grid-template-columns: 1fr; } }
+.figura { margin: 1rem 0; }
+.figura img { display: block; width: 100%; border-radius: 6px; border: 1px solid var(--borde); }
+.figura--lamina img { background: var(--lamina); padding: 0.75rem; }
+.figura figcaption { color: var(--suave); font-size: 0.88rem; margin-top: 0.4rem; }
+.miniatura { display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: contain; background: var(--lamina); border: 1px solid var(--borde); border-radius: 6px; padding: 0.5rem; margin-top: 0.75rem; }
+.miniatura--foto { object-fit: cover; padding: 0; }
+.datos { padding-left: 1.1rem; }
+.datos li { margin: 0.2rem 0; }
+.noticias, .linea { list-style: none; padding: 0; }
+.noticias li, .linea li { display: grid; grid-template-columns: 7.5rem 1fr; gap: 1rem; padding: 0.45rem 0; border-bottom: 1px solid var(--borde); }
+.noticias time, .linea time { color: var(--suave); }
+@media (max-width: 560px) { .noticias li, .linea li { grid-template-columns: 1fr; gap: 0.1rem; } }
+.publicaciones { padding-left: 1.4rem; }
+.publicaciones li { margin-bottom: 1rem; }
+.enlaces { display: block; font-size: 0.9rem; }
+.tabla { width: 100%; border-collapse: collapse; }
+.tabla th, .tabla td { text-align: left; padding: 0.45rem; border-bottom: 1px solid var(--borde); vertical-align: top; }
+.tabla-scroll { overflow-x: auto; }
+.nota { color: var(--suave); font-size: 0.9rem; }
+.pie { margin-top: 3rem; border-top: 1px solid var(--borde); color: var(--suave); font-size: 0.9rem; padding: 1rem 0 2rem; }
+
+/* Estado de publicaciones y tipo de hito */
+.estado, .tipo { display: inline-block; font-size: 0.78rem; font-weight: 600; border-radius: 999px; padding: 0 0.55rem; border: 1px solid currentColor; white-space: nowrap; vertical-align: 1px; }
+.estado--publicado { color: var(--verde); }
+.estado--aceptado { color: var(--acento); }
+.estado--revision { color: var(--ambar); }
+.estado--preparacion { color: var(--suave); }
+.tipo--formacion { color: var(--violeta); }
+.tipo--id { color: var(--acento); }
+.tipo--publicacion { color: var(--verde); }
+.tipo--comunidad { color: var(--coral); }
+.tipo--docencia { color: var(--ambar); }
+.tipo--plan { color: var(--suave); border-style: dashed; }
+
+/* Línea de tiempo */
+.leyenda { display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; list-style: none; padding: 0; margin: 0.5rem 0 1.5rem; }
+.trayectoria { margin: 0; padding: 0; list-style: none; }
+.trayectoria > li { position: relative; display: grid; grid-template-columns: 4.5rem 1fr; gap: 1.5rem; padding-bottom: 1.4rem; }
+.trayectoria > li::before { content: ""; position: absolute; left: calc(5.25rem - 1px); top: 0.55rem; bottom: -0.55rem; width: 2px; background: var(--borde); }
+.trayectoria > li:last-child::before { display: none; }
+.trayectoria__anio { font-weight: 700; font-size: 1.15rem; color: var(--acento); text-align: right; }
+.trayectoria__hitos { list-style: none; margin: 0; padding: 0; position: relative; }
+.trayectoria__hitos::before { content: ""; position: absolute; left: -1.15rem; top: 0.42rem; width: 0.8rem; height: 0.8rem; border-radius: 50%; background: var(--acento); box-shadow: 0 0 0 3px var(--fondo); }
+.trayectoria__hitos li { margin: 0 0 0.5rem; }
+.trayectoria__hitos li.futuro { color: var(--suave); }
+@media (max-width: 560px) {
+  .trayectoria > li { grid-template-columns: 1fr; gap: 0.2rem; }
+  .trayectoria > li::before, .trayectoria__hitos::before { display: none; }
+  .trayectoria__anio { text-align: left; }
+}
+
+/* Marcas de contenido pendiente: borrar la clase cuando se complete */
+.falta { background: var(--falta-fondo); color: var(--falta-texto); border-radius: 4px; padding: 0 0.25rem; }
+
+/* Impresión del CV: solo el contenido, en tinta negra */
+@media print {
+  .cabecera, .pie, .botones, .no-imprimir { display: none !important; }
+  body { background: #fff; color: #000; font-size: 10.5pt; line-height: 1.45; }
+  a { color: #000; text-decoration: none; }
+  h1 { margin-top: 0; }
+  h2 { font-size: 12.5pt; margin: 1rem 0 0.3rem; border-bottom: 1px solid #999; }
+  .linea li { border-bottom: 0; padding: 0.15rem 0; }
+  .etiquetas li { border-color: #999; }
+  .contenedor { max-width: none; padding: 0; }
+}
