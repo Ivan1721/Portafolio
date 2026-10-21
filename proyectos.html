@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Proyectos | Iván García-Fernández</title>
-  <meta name="description" content="Proyectos y código">
+  <meta name="description" content="Proyectos de I+D en los que colaboro (Fondecyt, Núcleo Milenio Phytolearning, Endowment UNAB) y software abierto: pika_ros, milo_ws, arm-viz, HarvestView y segmentación bajo oclusión.">
   <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
@@ -15,8 +15,9 @@
       <ul class="nav__lista">
         <li><a href="index.html" class="nav__link">Inicio</a></li>
         <li><a href="investigacion.html" class="nav__link">Investigación</a></li>
+        <li><a href="trayectoria.html" class="nav__link">Trayectoria</a></li>
         <li><a href="publicaciones.html" class="nav__link">Publicaciones</a></li>
-        <li><a href="proyectos.html" class="nav__link activo">Proyectos</a></li>
+        <li><a href="proyectos.html" class="nav__link activo" aria-current="page">Proyectos</a></li>
         <li><a href="docencia.html" class="nav__link">Docencia</a></li>
         <li><a href="cv.html" class="nav__link">CV</a></li>
       </ul>
@@ -25,30 +26,96 @@
   <main class="contenedor">
     <h1>Proyectos</h1>
 
-    <article class="tarjeta">
-      <h2>pika_ros: Piper + Pika en ROS 2</h2>
-      <p>Espacio de trabajo ROS 2 Humble para el kit de captura Pika de AgileX y el brazo Piper:
-      teleoperación, simulación en Gazebo con escenas de huerto, modelo del robot y base para la
-      percepción activa.</p>
-      <p class="enlaces"><a href="https://github.com/Ivan1721/pika_ros">Código</a> · <span class="falta">[figura o video]</span></p>
-    </article>
+    <h2>Proyectos de I+D</h2>
+    <div class="rejilla">
+      <article class="tarjeta">
+        <h3>Fondecyt de Iniciación 11240105 (ANID)</h3>
+        <p class="tarjeta__meta">2024–2027 · Colaborador (tesista)</p>
+        <p><em>Improving fruit post-harvest process based on human-robot interaction and artificial intelligence
+        techniques</em>. Investigador responsable: Dr. Juan Pablo Vásconez.</p>
+      </article>
+      <article class="tarjeta">
+        <h3>Endowment I+D – Inteligencia Artificial – UNAB 2024</h3>
+        <p class="tarjeta__meta">2024–2026 · Colaborador</p>
+        <p><em>Intelligent Robot-based Active Perception System for Enhanced Fruit Harvesting and Transport</em>. Con este
+        proyecto se compraron los brazos PiPER de la plataforma de mi tesis.</p>
+      </article>
+      <article class="tarjeta">
+        <h3>Núcleo Milenio Phytolearning (ANID NCN2024_047)</h3>
+        <p class="tarjeta__meta">2025–2027 · Colaborador</p>
+        <p>Iniciativa Científica Milenio. Presenté la segmentación robusta de manzanas con YOLO11-seg en su Jornada de
+        Verano 2026.</p>
+      </article>
+      <article class="tarjeta">
+        <h3>Concurso Prueba de Concepto – UNAB 2022</h3>
+        <p class="tarjeta__meta">2023 · Colaborador (ayudante de investigación)</p>
+        <p><em>Diseño e implementación de prototipo detector de frutos basado en visión e IA</em>, proyecto del Dr. Juan
+        Pablo Vásconez.</p>
+      </article>
+      <article class="tarjeta">
+        <h3>Unidad de Robótica, Fundación Ciencia &amp; Vida</h3>
+        <p class="tarjeta__meta">Octubre de 2024 a febrero de 2025 · Profesional de apoyo</p>
+        <p>Proyectos <em>Kura</em> (detección de patógenos en alimentos con visión e IA) y <em>Neuron Spider</em> (robótica
+        biomimética): investigación de soluciones, hardware, software, apoyo en electrónica y robótica, e interfaz web con
+        simulación basada en agentes.</p>
+      </article>
+    </div>
 
-    <article class="tarjeta">
-      <h2>Milo: manipulador móvil del equipo</h2>
-      <p><span class="falta">[Tu rol en el proyecto]</span></p>
-      <p class="enlaces"><a href="https://github.com/Ivan1721/milo_ws">Código</a></p>
-    </article>
-
-    <article class="tarjeta">
-      <h2><span class="falta">[Proyecto]</span></h2>
-      <p><span class="falta">[Descripción, tu rol, resultados, enlaces]</span></p>
-    </article>
+    <h2>Software y demostraciones</h2>
+    <div class="rejilla">
+      <article class="tarjeta">
+        <h3>pika_ros: PiPER + Pika en ROS 2</h3>
+        <img class="miniatura miniatura--foto" src="assets/img/escena_nbv.jpg" alt="Simulación del PiPER con la pinza Pika frente a un manzano con vistas candidatas" loading="lazy">
+        <p>Mi rama del kit Pika de AgileX para ROS 2 Humble: modelo del PiPER con la pinza Pika y sus cámaras D405 y ojo de
+        pez, simulación en Gazebo con las cámaras de la pinza en los mismos topics del hardware, manzanos generados con
+        Helios (tres densidades y seis iluminaciones), herramienta de renders y una demostración de siguiente mejor vista
+        con la visibilidad validada. Aquí vivirá el código de percepción activa de la tesis.</p>
+        <p class="enlaces"><a href="https://github.com/Ivan1721/pika_ros/tree/pika-custom-ros2">Rama pika-custom-ros2</a> · <a href="https://github.com/Ivan1721/pika_ros/tree/sim-gazebo">rama sim-gazebo (simulación y NBV)</a></p>
+      </article>
+      <article class="tarjeta">
+        <h3>PikaAnyArm: teleoperación con el Pika Sense</h3>
+        <p>Teleoperación del brazo PiPER con el Pika Sense, el mando con que el operador mueve el efector final; mi rama se
+        puede usar también en simulación. Es la base del modo de respaldo de la tesis, en el que el operador recupera el
+        fruto y su demostración queda registrada.</p>
+        <p class="enlaces"><a href="https://github.com/Ivan1721/PikaAnyArm/tree/pika-custom-ros2">Código (rama pika-custom-ros2)</a></p>
+      </article>
+      <article class="tarjeta">
+        <h3>milo_ws: el brazo de Milo para RoboCup@Home</h3>
+        <img class="miniatura" src="assets/img/milo.svg" alt="Ilustración de Milo: base con ruedas, columna con elevador y brazo con cámara en la pinza" loading="lazy">
+        <p>Milo es el manipulador móvil del equipo de la UNAB para RoboCup@Home: base diferencial, columna con elevador,
+        brazo de 6 grados de libertad y cámara Orbbec en la pinza. Mi parte es el brazo: cinemática inversa, MoveIt 2 y
+        OctoMap en Gazebo, y el diseño de un planificador de vistas. Es el segundo robot con que la tesis mostrará que el
+        método no depende del robot.</p>
+        <p class="enlaces"><a href="https://github.com/Ivan1721/milo_ws/tree/brazo">Código (rama brazo)</a></p>
+      </article>
+      <article class="tarjeta">
+        <h3>arm-viz: la cinemática de Milo, explicada</h3>
+        <img class="miniatura miniatura--foto" src="assets/img/arm-viz.jpg" alt="Captura de arm-viz: el brazo de Milo en 3D con sliders por articulación y explicaciones en palabras simples" loading="lazy">
+        <p>Página interactiva que explica la cinemática directa, el jacobiano y la cinemática inversa del brazo de Milo en
+        palabras simples, con las medidas de su URDF: cada fórmula trae su lectura y un ejemplo con números.</p>
+        <p class="enlaces"><a href="https://ivan1721.github.io/arm-viz/">Abrir la página</a> · <a href="https://github.com/Ivan1721/arm-viz">código</a></p>
+      </article>
+      <article class="tarjeta">
+        <h3>HarvestView: cosecha humano-robot en 3D</h3>
+        <p>Maqueta 3D en el navegador de la cosecha con un robot de transporte. Reproduce y valida las corridas del simulador
+        MATLAB del manuscrito enviado a <em>Biosystems Engineering</em> y las extiende a otros huertos, cuadrillas y robots,
+        con las dimensiones reales del robot Clearpath Warthog.</p>
+        <p class="enlaces"><a href="https://ivan1721.github.io/harvest-viz/">Abrir la demostración</a> · <a href="https://github.com/Ivan1721/harvest-viz">código</a></p>
+      </article>
+      <article class="tarjeta">
+        <h3>Segmentación de frutos bajo oclusión</h3>
+        <img class="miniatura miniatura--foto" src="assets/img/segmentacion_d405.jpg" alt="Manzana segmentada por YOLO11 en una imagen de la cámara D405" loading="lazy">
+        <p>Entrenamiento, evaluación y análisis por nivel de visibilidad de YOLO11-seg y YOLO26-seg, y de Mask2Former en un
+        fork de MMDetection; es el código del artículo aceptado en ARTIIS 2026.</p>
+        <p class="enlaces"><a href="https://github.com/Ivan1721/Ultralytics">Código (YOLO)</a> · <a href="https://github.com/Ivan1721/mmdetection">fork de MMDetection</a></p>
+      </article>
+    </div>
 
   </main>
   <footer class="pie">
     <div class="contenedor">
-      <p>Iván García-Fernández · [Programa / cargo] · Universidad Andrés Bello</p>
-      <p><a href="mailto:[correo-institucional]">[correo institucional]</a> · <a href="https://github.com/Ivan1721">GitHub</a> · <a href="[ORCID]">ORCID</a> · <a href="[Google Scholar]">Google Scholar</a> · <a href="[LinkedIn]">LinkedIn</a></p>
+      <p>Iván García-Fernández · Doctorado en Ingeniería de Sistemas Avanzados · Universidad Andrés Bello, Santiago, Chile</p>
+      <p><a href="mailto:i.garciafernandez@uandresbello.edu">i.garciafernandez@uandresbello.edu</a> · <a href="https://github.com/Ivan1721">GitHub</a> · <a href="https://orcid.org/0009-0005-4235-9913">ORCID</a> · <span class="falta">[Google Scholar]</span> · <span class="falta">[LinkedIn]</span></p>
     </div>
   </footer>
   <script src="js/main.js"></script>

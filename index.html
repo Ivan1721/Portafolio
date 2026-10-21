@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Inicio | Iván García-Fernández</title>
-  <meta name="description" content="Investigador en percepción activa para manipulación robótica en agricultura">
+  <meta name="description" content="Iván García-Fernández, doctorando en Ingeniería de Sistemas Avanzados (UNAB): percepción activa con brazos robóticos para la cosecha de frutos ocluidos, con el humano en el lazo.">
   <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
@@ -13,8 +13,9 @@
       <a href="index.html" class="nav__marca">Iván García-Fernández</a>
       <button class="nav__boton" aria-label="Abrir menú" aria-expanded="false">☰</button>
       <ul class="nav__lista">
-        <li><a href="index.html" class="nav__link activo">Inicio</a></li>
+        <li><a href="index.html" class="nav__link activo" aria-current="page">Inicio</a></li>
         <li><a href="investigacion.html" class="nav__link">Investigación</a></li>
+        <li><a href="trayectoria.html" class="nav__link">Trayectoria</a></li>
         <li><a href="publicaciones.html" class="nav__link">Publicaciones</a></li>
         <li><a href="proyectos.html" class="nav__link">Proyectos</a></li>
         <li><a href="docencia.html" class="nav__link">Docencia</a></li>
@@ -27,39 +28,60 @@
       <img class="perfil__foto" src="assets/img/foto.jpg" alt="Foto de Iván García-Fernández" onerror="this.classList.add('perfil__foto--vacia')">
       <div>
         <h1>Iván García-Fernández</h1>
-        <p class="perfil__cargo"><span class="falta">[Cargo: p. ej. Candidato a Doctor en …]</span> · Universidad Andrés Bello</p>
-        <p><span class="falta">[Resumen de 3–5 líneas: quién eres, qué investigas y para qué]</span>. Trabajo en
-        <strong>percepción activa para manipulación robótica</strong>, con foco en la agricultura:
-        que un brazo robótico elija desde dónde mirar una fruta tapada por hojas, considerando si
-        puede llegar a esa vista.</p>
+        <p class="perfil__cargo">Doctorando en Ingeniería de Sistemas Avanzados · Universidad Andrés Bello · Santiago, Chile</p>
+        <p class="lead">Soy Ingeniero en Automatización y Robótica (UNAB, 2024, Magna Cum Laude) e investigo en el grupo de
+        robótica del Dr. Juan Pablo Vásconez. Mi tesis trata la <strong>percepción activa con brazos robóticos para la cosecha
+        de frutos ocluidos</strong>: un brazo con cámara elige la vista que revela un fruto tapado por hojas y ramas
+        considerando lo que verá el detector, si el brazo puede llegar a esa vista y cuándo conviene pedir ayuda al operador
+        humano.</p>
         <p class="botones">
-          <a class="boton" href="cv.html">CV</a>
-          <a class="boton boton--borde" href="investigacion.html">Investigación</a>
+          <a class="boton" href="investigacion.html">Investigación</a>
+          <a class="boton boton--borde" href="trayectoria.html">Trayectoria</a>
+          <a class="boton boton--borde" href="cv.html">CV</a>
         </p>
       </div>
     </section>
+
+    <ul class="cifras" aria-label="Resumen en cifras">
+      <li><strong>318</strong><span>estudios en mi revisión sistemática de percepción activa (PRISMA 2020)</span></li>
+      <li><strong>4</strong><span>artículos en congresos (Springer CCIS e IEEE), uno aceptado para noviembre de 2026</span></li>
+      <li><strong>2</strong><span>manuscritos para <em>Biosystems Engineering</em>: uno en revisión y uno por enviar</span></li>
+      <li><strong>4</strong><span>proyectos de I+D como colaborador (Fondecyt, Núcleo Milenio, Endowment UNAB y Prueba de Concepto UNAB)</span></li>
+    </ul>
 
     <section>
       <h2>Intereses de investigación</h2>
       <ul class="etiquetas">
         <li>Percepción activa</li><li>Siguiente mejor vista (NBV)</li><li>Manipulación robótica</li>
-        <li>Robótica agrícola</li><li>Humano en el lazo</li><li>Simulación (ROS 2, Gazebo)</li>
+        <li>Robótica agrícola</li><li>Humano en el lazo</li><li>Interacción humano-robot</li>
+        <li>Segmentación de instancias bajo oclusión</li><li>Aprendizaje por demostración</li><li>ROS 2 y Gazebo</li>
       </ul>
     </section>
+
+    <figure class="figura figura--lamina">
+      <img src="assets/img/plataforma.svg" alt="Ilustración de la plataforma: un robot Scout 2.0 tira un remolque con plataforma elevable que lleva una caja con manzanas y el brazo PiPER con la pinza Pika" loading="lazy">
+      <figcaption>La plataforma de mi tesis: un robot AgileX Scout 2.0 tira un remolque con plataforma elevable que lleva el
+      brazo AgileX PiPER con la pinza Pika (cámaras RealSense D405 y ojo de pez en la muñeca) y las cajas cosecheras.</figcaption>
+    </figure>
 
     <section>
       <h2>Noticias</h2>
       <ul class="noticias">
-        <li><time><span class="falta">[mes año]</span></time> <span class="falta">[Noticia: envío de un artículo, presentación, premio…]</span></li>
-        <li><time><span class="falta">[mes año]</span></time> <span class="falta">[Noticia]</span></li>
+        <li><time datetime="2026-11">nov. 2026</time> <span>Presentaré en ARTIIS 2026 el estudio de segmentación de frutos bajo oclusión (YOLO11, YOLO26 y Mask2Former), aceptado para Springer CCIS.</span></li>
+        <li><time datetime="2026-10">oct. 2026</time> <span>Entregué el proyecto de tesis; el examen de candidatura está propuesto para el 26 de noviembre de 2026.</span></li>
+        <li><time datetime="2026-10">oct. 2026</time> <span>Enviamos a <em>Biosystems Engineering</em> el manuscrito sobre cuánto escala un robot de transporte en la cosecha humano-robot de palta.</span></li>
+        <li><time datetime="2026-10">oct. 2026</time> <span>Activamos la Rama Estudiantil IEEE de la UNAB y su capítulo de la Robotics and Automation Society; presido la rama.</span></li>
+        <li><time datetime="2026-07">jul. 2026</time> <span>Participé en la 3rd Summer School for Systems &amp; Software Engineering in Robotics de TU Delft (Países Bajos, 40 horas).</span></li>
+        <li><time datetime="2025-11">nov. 2025</time> <span>Presenté en RICAI 2025 (IEEE), en Hangzhou, China, la evaluación de interacción humano-robot en un sistema de dos robots teleoperados.</span></li>
       </ul>
+      <p class="nota">Toda la historia, año por año, está en <a href="trayectoria.html">Trayectoria</a>.</p>
     </section>
 
   </main>
   <footer class="pie">
     <div class="contenedor">
-      <p>Iván García-Fernández · [Programa / cargo] · Universidad Andrés Bello</p>
-      <p><a href="mailto:[correo-institucional]">[correo institucional]</a> · <a href="https://github.com/Ivan1721">GitHub</a> · <a href="[ORCID]">ORCID</a> · <a href="[Google Scholar]">Google Scholar</a> · <a href="[LinkedIn]">LinkedIn</a></p>
+      <p>Iván García-Fernández · Doctorado en Ingeniería de Sistemas Avanzados · Universidad Andrés Bello, Santiago, Chile</p>
+      <p><a href="mailto:i.garciafernandez@uandresbello.edu">i.garciafernandez@uandresbello.edu</a> · <a href="https://github.com/Ivan1721">GitHub</a> · <a href="https://orcid.org/0009-0005-4235-9913">ORCID</a> · <span class="falta">[Google Scholar]</span> · <span class="falta">[LinkedIn]</span></p>
     </div>
   </footer>
   <script src="js/main.js"></script>

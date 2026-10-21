@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>CV | Iván García-Fernández</title>
-  <meta name="description" content="Curriculum vitae">
+  <meta name="description" content="Curriculum vitae de Iván García-Fernández: formación, experiencia en investigación, proyectos, publicaciones, colaboraciones, distinciones y competencias.">
   <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
@@ -15,47 +15,105 @@
       <ul class="nav__lista">
         <li><a href="index.html" class="nav__link">Inicio</a></li>
         <li><a href="investigacion.html" class="nav__link">Investigación</a></li>
+        <li><a href="trayectoria.html" class="nav__link">Trayectoria</a></li>
         <li><a href="publicaciones.html" class="nav__link">Publicaciones</a></li>
         <li><a href="proyectos.html" class="nav__link">Proyectos</a></li>
         <li><a href="docencia.html" class="nav__link">Docencia</a></li>
-        <li><a href="cv.html" class="nav__link activo">CV</a></li>
+        <li><a href="cv.html" class="nav__link activo" aria-current="page">CV</a></li>
       </ul>
     </nav>
   </header>
   <main class="contenedor">
-    <h1>Curriculum Vitae</h1>
-    <p class="botones"><a class="boton" href="assets/docs/cv.pdf">Descargar CV (PDF)</a></p>
+    <h1>Iván Humberto García-Fernández</h1>
+    <p class="perfil__cargo">Doctorando en Ingeniería de Sistemas Avanzados · Robótica agrícola, percepción activa e interacción humano-robot<br>
+    Santiago, Chile · <a href="mailto:i.garciafernandez@uandresbello.edu">i.garciafernandez@uandresbello.edu</a> · ORCID <a href="https://orcid.org/0009-0005-4235-9913">0009-0005-4235-9913</a></p>
+    <p class="botones"><button class="boton" type="button" onclick="window.print()">Imprimir o guardar como PDF</button></p>
+
+    <h2>Perfil</h2>
+    <p>Doctorando en Ingeniería de Sistemas Avanzados en la Universidad Andrés Bello e Ingeniero en Automatización y
+    Robótica con distinción Magna Cum Laude. Investigo la percepción activa con brazos robóticos para la cosecha de frutos
+    ocluidos: un brazo con cámara elige la vista que revela el fruto considerando lo que el detector verá, lo que el brazo
+    puede alcanzar y el apoyo del operador humano. Tengo experiencia en segmentación de instancias, revisiones
+    sistemáticas, interacción humano-robot e integración de robots con ROS 2.</p>
 
     <h2>Formación</h2>
     <ul class="linea">
-      <li><time><span class="falta">[años]</span></time> <span class="falta">[Grado, programa, universidad]</span></li>
-      <li><time><span class="falta">[años]</span></time> <span class="falta">[Grado, programa, universidad]</span></li>
+      <li><time>2025–presente</time> <span><strong>Doctorado en Ingeniería de Sistemas Avanzados</strong>, Universidad Andrés Bello, Chile. Profesor guía: Dr. Juan Pablo Vásconez; co-guía: Dra. Catalina González Castaño. Promedio ponderado 6,2 (10 asignaturas aprobadas). Tesis (título provisional): <em>Percepción activa con el humano en el lazo para la cosecha robótica de frutos ocluidos: planificación de vistas y aprendizaje por demostración del efector final en un manipulador móvil</em>. Examen de candidatura propuesto para el 26 de noviembre de 2026.</span></li>
+      <li><time>2020–2024</time> <span><strong>Ingeniero en Automatización y Robótica</strong>, Universidad Andrés Bello, Chile. Título con distinción Magna Cum Laude (junio de 2024); Licenciado en Ingeniería (2024) y Bachelor of Science (2020). Tesis: <em>Hand gesture detection based on convolutional neural network to control a 6DOF manipulator robot with non-verbal communication</em>, guiada por el Dr. Juan Pablo Vásconez y publicada en ARTIIS 2024.</span></li>
+      <li><time>2026</time> <span><strong>3rd Summer School for Systems &amp; Software Engineering in Robotics</strong>, TU Delft, Países Bajos (29 de junio al 3 de julio, 40 horas): robots cognitivos, planificación, ingeniería de sistemas basada en modelos y práctica en un robot de manipulación móvil.</span></li>
     </ul>
 
     <h2>Experiencia en investigación</h2>
     <ul class="linea">
-      <li><time><span class="falta">[años]</span></time> <span class="falta">[Cargo, laboratorio o grupo, institución]</span></li>
+      <li><time>2023–presente</time> <span><strong>Grupo de robótica del Dr. Juan Pablo Vásconez</strong>, Facultad de Ingeniería, Universidad Andrés Bello. Práctica profesional en 2023 y ayudante de investigación desde 2024: revisión sistemática PRISMA 2020 de 318 estudios sobre percepción activa con manipuladores; segmentación de instancias de frutos según su oclusión con YOLO11, YOLO26 y Mask2Former; integración del brazo AgileX PiPER con la pinza Pika y la cámara RealSense D405 sobre un remolque elevable tirado por un AgileX Scout 2.0, con ROS 2 y Gazebo; simulación de la carga de trabajo y la producción en la cosecha colaborativa humano-robot; asesoría a ayudantes de investigación y demostraciones en ferias y exposiciones.</span></li>
+      <li><time>2024–2025</time> <span><strong>Profesional de apoyo, Unidad de Robótica, Fundación Ciencia &amp; Vida</strong> (octubre de 2024 a febrero de 2025). Proyectos <em>Kura</em> (detección de patógenos en alimentos con visión e IA) y <em>Neuron Spider</em> (robótica biomimética): investigación de soluciones, hardware, software y apoyo en electrónica y robótica; interfaz web con simulación basada en agentes.</span></li>
+    </ul>
+
+    <h2>Proyectos</h2>
+    <ul class="linea">
+      <li><time>2024–2027</time> <span>Fondecyt de Iniciación 11240105 (ANID), <em>Improving fruit post-harvest process based on human-robot interaction and artificial intelligence techniques</em>. Investigador responsable: Dr. Juan Pablo Vásconez. Colaborador (tesista).</span></li>
+      <li><time>2024–2026</time> <span>Endowment I+D – Inteligencia Artificial – UNAB 2024, <em>Intelligent Robot-based Active Perception System for Enhanced Fruit Harvesting and Transport</em>. Colaborador.</span></li>
+      <li><time>2025–2027</time> <span>Núcleo Milenio Phytolearning (ANID NCN2024_047). Colaborador.</span></li>
+      <li><time>2023</time> <span>Concurso Prueba de Concepto – UNAB 2022, <em>Diseño e implementación de prototipo detector de frutos basado en visión e IA</em> (Dr. Juan Pablo Vásconez). Colaborador.</span></li>
+    </ul>
+
+    <h2>Publicaciones</h2>
+    <p>Cuatro trabajos en congresos indexados (tres publicados en Springer CCIS e IEEE y uno aceptado en ARTIIS 2026), un
+    manuscrito en revisión y otro en preparación para <em>Biosystems Engineering</em>. La lista completa, con DOI, está en
+    <a href="publicaciones.html">Publicaciones</a>.</p>
+
+    <h2>Presentaciones y divulgación</h2>
+    <ul class="linea">
+      <li><time>2025</time> <span>RICAI 2025 (IEEE), Hangzhou, China, noviembre: <em>Human-Robot Interaction Assessment in a Teleoperated Dual-Robot System</em>.</span></li>
+      <li><time>2026</time> <span>Jornada Técnica AC3E 2026, Viña del Mar: <em>Predicting Workload and Production in a Human-Robot Collaborative Avocado Harvesting Scenario: A Machine Learning Approach</em>.</span></li>
+      <li><time>2026</time> <span>Jornada de Verano 2026, Núcleo Milenio Phytolearning, Las Condes: <em>Towards Active Perception: Robust Apple Instance Segmentation Using YOLO11-seg</em>.</span></li>
+      <li><time>2026</time> <span>Muestra interactiva en el stand del CTE UNAB, V21 Open Fest, y stand de Automatización y Robótica en Roboticon 2026, Viña del Mar.</span></li>
+    </ul>
+
+    <h2>Docencia</h2>
+    <ul class="linea">
+      <li><time>2025</time> <span>Ayudante de los talleres de Programación y de Robótica y Mecatrónica (robots industriales FANUC), Universidad Andrés Bello, segundo semestre, ingeniería diurna y vespertina.</span></li>
+    </ul>
+
+    <h2>Liderazgo y comunidad</h2>
+    <ul class="linea">
+      <li><time>2026–presente</time> <span>Presidente de la Rama Estudiantil IEEE de la UNAB, activada en octubre de 2026 junto con su capítulo IEEE RAS (consejero: Dr. Miguel Solís); taller de robótica basado en la escuela de TU Delft en preparación.</span></li>
+      <li><time>2027</time> <span>Robot abierto MIRTE Master (placa integrada facilitada por TU Delft): armado con estudiantes desde enero de 2027, con presupuesto de la carrera.</span></li>
+      <li><time>2026–presente</time> <span>Equipo de la UNAB para RoboCup@Home: desarrollo del brazo del robot Milo en Gazebo.</span></li>
     </ul>
 
     <h2>Estancias y colaboraciones</h2>
-    <ul class="linea"><li><time><span class="falta">[años]</span></time> <span class="falta">[Institución, tema]</span></li></ul>
+    <ul class="linea">
+      <li><time>2024–presente</time> <span>Dr. Leonardo Guevara, University of Lincoln (Reino Unido): coautor en ARTIIS 2024; visitó el grupo en la UNAB en 2025; pasantía doctoral en evaluación para el 6.º o 7.º semestre.</span></li>
+      <li><time>2026</time> <span>Dra. Henny Admoni, Carnegie Mellon University (Estados Unidos): manuscrito sobre el robot de transporte en la cosecha humano-robot, en revisión en <em>Biosystems Engineering</em>.</span></li>
+      <li><time>2026</time> <span>Dr. Carlos Hernández Corbato, TU Delft (Países Bajos): revisión sistemática de percepción activa; placa integrada del robot MIRTE Master.</span></li>
+      <li><time>2026</time> <span>Centro de Estudios Avanzados en Fruticultura (CEAF), Región de O'Higgins: salidas a terreno para los ensayos en huerto.</span></li>
+    </ul>
 
-    <h2>Premios y financiamiento</h2>
-    <ul class="linea"><li><time><span class="falta">[año]</span></time> <span class="falta">[Beca, fondo o premio]</span></li></ul>
+    <h2>Distinciones y becas</h2>
+    <ul class="linea">
+      <li><time>2026</time> <span>Seleccionado para la Escuela de Primavera de Deep Learning, Buenos Aires, Argentina.</span></li>
+      <li><time>2024</time> <span>Título profesional con distinción Magna Cum Laude, Universidad Andrés Bello.</span></li>
+      <li><time>2022–2023</time> <span>Beca Endowment Apoyo Estudiantil, Universidad Andrés Bello.</span></li>
+    </ul>
 
-    <h2>Habilidades técnicas</h2>
-    <ul class="etiquetas">
-      <li>ROS 2</li><li>Gazebo</li><li>Python</li><li>C++</li><li><span class="falta">[…]</span></li>
+    <h2>Competencias técnicas</h2>
+    <ul class="datos">
+      <li><strong>Programación:</strong> Python, MATLAB, JavaScript, Java.</li>
+      <li><strong>Deep learning y ML:</strong> PyTorch, TensorFlow, Ultralytics YOLO (YOLO11, YOLO26), MMDetection (Mask2Former); detección y segmentación de instancias bajo oclusión, evaluación con mAP, precisión y exhaustividad.</li>
+      <li><strong>Robótica:</strong> ROS y ROS 2, Gazebo, MoveIt 2, CoppeliaSim, NVIDIA Jetson, AgileX PiPER y Scout 2.0, pinza Pika, cámaras RealSense, manipuladores y robots móviles.</li>
+      <li><strong>Investigación:</strong> revisiones sistemáticas (PRISMA 2020), diseño experimental, escritura científica en inglés.</li>
+      <li><strong>Herramientas:</strong> Git y GitHub, Ubuntu, Docker, LaTeX y Overleaf, Microsoft Office.</li>
     </ul>
 
     <h2>Idiomas</h2>
-    <p><span class="falta">[Español (nativo), inglés (nivel)…]</span></p>
+    <p>Español nativo. Inglés intermedio: lectura, escritura y comunicación técnica.</p>
 
   </main>
   <footer class="pie">
     <div class="contenedor">
-      <p>Iván García-Fernández · [Programa / cargo] · Universidad Andrés Bello</p>
-      <p><a href="mailto:[correo-institucional]">[correo institucional]</a> · <a href="https://github.com/Ivan1721">GitHub</a> · <a href="[ORCID]">ORCID</a> · <a href="[Google Scholar]">Google Scholar</a> · <a href="[LinkedIn]">LinkedIn</a></p>
+      <p>Iván García-Fernández · Doctorado en Ingeniería de Sistemas Avanzados · Universidad Andrés Bello, Santiago, Chile</p>
+      <p><a href="mailto:i.garciafernandez@uandresbello.edu">i.garciafernandez@uandresbello.edu</a> · <a href="https://github.com/Ivan1721">GitHub</a> · <a href="https://orcid.org/0009-0005-4235-9913">ORCID</a> · <span class="falta">[Google Scholar]</span> · <span class="falta">[LinkedIn]</span></p>
     </div>
   </footer>
   <script src="js/main.js"></script>
