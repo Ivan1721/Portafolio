@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Inicio | Iván García-Fernández</title>
+  <meta name="description" content="Investigador en percepción activa para manipulación robótica en agricultura">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <header class="cabecera">
+    <nav class="nav contenedor">
+      <a href="index.html" class="nav__marca">Iván García-Fernández</a>
+      <button class="nav__boton" aria-label="Abrir menú" aria-expanded="false">☰</button>
+      <ul class="nav__lista">
+        <li><a href="index.html" class="nav__link activo">Inicio</a></li>
+        <li><a href="investigacion.html" class="nav__link">Investigación</a></li>
+        <li><a href="publicaciones.html" class="nav__link">Publicaciones</a></li>
+        <li><a href="proyectos.html" class="nav__link">Proyectos</a></li>
+        <li><a href="docencia.html" class="nav__link">Docencia</a></li>
+        <li><a href="cv.html" class="nav__link">CV</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="contenedor">
+    <section class="perfil">
+      <img class="perfil__foto" src="assets/img/foto.jpg" alt="Foto de Iván García-Fernández" onerror="this.classList.add('perfil__foto--vacia')">
+      <div>
+        <h1>Iván García-Fernández</h1>
+        <p class="perfil__cargo"><span class="falta">[Cargo: p. ej. Candidato a Doctor en …]</span> · Universidad Andrés Bello</p>
+        <p><span class="falta">[Resumen de 3–5 líneas: quién eres, qué investigas y para qué]</span>. Trabajo en
+        <strong>percepción activa para manipulación robótica</strong>, con foco en la agricultura:
+        que un brazo robótico elija desde dónde mirar una fruta tapada por hojas, considerando si
+        puede llegar a esa vista.</p>
+        <p class="botones">
+          <a class="boton" href="cv.html">CV</a>
+          <a class="boton boton--borde" href="investigacion.html">Investigación</a>
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Intereses de investigación</h2>
+      <ul class="etiquetas">
+        <li>Percepción activa</li><li>Siguiente mejor vista (NBV)</li><li>Manipulación robótica</li>
+        <li>Robótica agrícola</li><li>Humano en el lazo</li><li>Simulación (ROS 2, Gazebo)</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Noticias</h2>
+      <ul class="noticias">
+        <li><time><span class="falta">[mes año]</span></time> <span class="falta">[Noticia: envío de un artículo, presentación, premio…]</span></li>
+        <li><time><span class="falta">[mes año]</span></time> <span class="falta">[Noticia]</span></li>
+      </ul>
+    </section>
+
+  </main>
+  <footer class="pie">
+    <div class="contenedor">
+      <p>Iván García-Fernández · [Programa / cargo] · Universidad Andrés Bello</p>
+      <p><a href="mailto:[correo-institucional]">[correo institucional]</a> · <a href="https://github.com/Ivan1721">GitHub</a> · <a href="[ORCID]">ORCID</a> · <a href="[Google Scholar]">Google Scholar</a> · <a href="[LinkedIn]">LinkedIn</a></p>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+</body>
+</html>

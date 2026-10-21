@@ -1,0 +1,82 @@
+/* Esqueleto de portafolio académico: sobrio, legible y con modo oscuro automático */
+:root {
+  --fondo: #fbfbfa;
+  --superficie: #ffffff;
+  --texto: #1f2328;
+  --suave: #5b636b;
+  --borde: #e2e4e7;
+  --acento: #1a7f86;
+  --falta-fondo: #fff4d6;
+  --falta-texto: #7a5300;
+  --ancho: 920px;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --fondo: #14171a;
+    --superficie: #1b1f23;
+    --texto: #e6e8ea;
+    --suave: #a3aab2;
+    --borde: #2c3238;
+    --acento: #4fb8bf;
+    --falta-fondo: #3a2f12;
+    --falta-texto: #f3cf7a;
+  }
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--fondo);
+  color: var(--texto);
+  font: 16px/1.65 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+a { color: var(--acento); }
+h1, h2 { line-height: 1.25; }
+h1 { font-size: 1.9rem; margin: 2rem 0 0.75rem; }
+h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; }
+.contenedor { max-width: var(--ancho); margin: 0 auto; padding: 0 16px; }
+
+/* Navegación */
+.cabecera { border-bottom: 1px solid var(--borde); background: var(--superficie); position: sticky; top: 0; z-index: 10; }
+.nav { display: flex; align-items: center; justify-content: space-between; min-height: 56px; }
+.nav__marca { font-weight: 600; color: var(--texto); text-decoration: none; }
+.nav__lista { display: flex; gap: 1.1rem; list-style: none; margin: 0; padding: 0; }
+.nav__link { color: var(--suave); text-decoration: none; }
+.nav__link.activo, .nav__link:hover { color: var(--acento); }
+.nav__boton { display: none; background: none; border: 0; font-size: 1.4rem; color: var(--texto); cursor: pointer; }
+@media (max-width: 720px) {
+  .nav__boton { display: block; }
+  .nav__lista { display: none; position: absolute; top: 56px; left: 0; right: 0; flex-direction: column;
+                gap: 0; background: var(--superficie); border-bottom: 1px solid var(--borde); padding: 0.5rem 16px; }
+  .nav__lista.abierta { display: flex; }
+  .nav__lista li { padding: 0.4rem 0; }
+}
+
+/* Inicio */
+.perfil { display: grid; grid-template-columns: 180px 1fr; gap: 2rem; align-items: start; margin-top: 2rem; }
+.perfil h1 { margin-top: 0; }
+.perfil__foto { width: 180px; height: 180px; object-fit: cover; border-radius: 50%; border: 1px solid var(--borde); }
+.perfil__foto--vacia { background: var(--borde); }
+.perfil__cargo { color: var(--suave); margin-top: -0.4rem; }
+@media (max-width: 640px) { .perfil { grid-template-columns: 1fr; } .perfil__foto { width: 140px; height: 140px; } }
+
+/* Componentes */
+.botones { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+.boton { display: inline-block; padding: 0.45rem 1rem; border-radius: 6px; background: var(--acento); color: #fff; text-decoration: none; }
+.boton--borde { background: none; color: var(--acento); border: 1px solid var(--acento); }
+.etiquetas { display: flex; flex-wrap: wrap; gap: 0.5rem; list-style: none; padding: 0; }
+.etiquetas li { border: 1px solid var(--borde); border-radius: 999px; padding: 0.15rem 0.75rem; font-size: 0.9rem; }
+.tarjeta { background: var(--superficie); border: 1px solid var(--borde); border-radius: 8px; padding: 0.5rem 1.25rem 1rem; margin: 1rem 0; }
+.figura { border: 1px dashed var(--borde); border-radius: 6px; padding: 2rem; text-align: center; color: var(--suave); }
+.noticias, .linea { list-style: none; padding: 0; }
+.noticias li, .linea li { display: grid; grid-template-columns: 7.5rem 1fr; gap: 1rem; padding: 0.35rem 0; border-bottom: 1px solid var(--borde); }
+.noticias time, .linea time { color: var(--suave); }
+.publicaciones li { margin-bottom: 0.9rem; }
+.enlaces { display: block; font-size: 0.9rem; }
+.tabla { width: 100%; border-collapse: collapse; }
+.tabla th, .tabla td { text-align: left; padding: 0.45rem; border-bottom: 1px solid var(--borde); }
+.nota { color: var(--suave); font-size: 0.9rem; }
+.pie { margin-top: 3rem; border-top: 1px solid var(--borde); color: var(--suave); font-size: 0.9rem; padding: 1rem 0 2rem; }
+
+/* Marcas de contenido pendiente: borrar la clase cuando se complete */
+.falta { background: var(--falta-fondo); color: var(--falta-texto); border-radius: 4px; padding: 0 0.25rem; }
